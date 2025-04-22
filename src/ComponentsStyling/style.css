@@ -1,0 +1,48 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.block {
+    background-color: brown;
+    /* customize the position as you need */
+    position: absolute;
+    animation: appear 20s linear;
+    animation-timeline:view();
+    animation-range: entry 0% cover 40%;
+}
+    
+
+
+/* delete it when you upload it to the General code   */
+/* Generate different sizes and positions for each block */
+.block:nth-child(1) { width: 80px; height: 80px; top: 100px; left: 10%; }
+.block:nth-child(2) { width: 120px; height: 60px; top: 200px; left: 70%; }
+.block:nth-child(3) { width: 90px; height: 90px; top: 350px; left: 30%; }
+.block:nth-child(4) { width: 150px; height: 50px; top: 400px; left: 50%; }
+.block:nth-child(5) { width: 70px; height: 120px; top: 500px; left: 20%; }
+.block:nth-child(6) { width: 100px; height: 100px; top: 600px; left: 80%; }
+.block:nth-child(7) { width: 60px; height: 60px; top: 700px; left: 15%; }
+.block:nth-child(8) { width: 130px; height: 80px; top: 750px; left: 65%; }
+.block:nth-child(9) { width: 95px; height: 95px; top: 900px; left: 40%; }
+.block:nth-child(10) { width: 110px; height: 70px; top: 950px; left: 10%; }
+.block:nth-child(11) { width: 85px; height: 85px; top: 1100px; left: 75%; }
+.block:nth-child(12) { width: 140px; height: 60px; top: 1150px; left: 25%; }
+.block:nth-child(13) { width: 75px; height: 110px; top: 1300px; left: 55%; }
+.block:nth-child(14) { width: 105px; height: 105px; top: 1350px; left: 85%; }
+.block:nth-child(15) { width: 65px; height: 65px; top: 1500px; left: 35%; }
+.block:nth-child(16) { width: 125px; height: 75px; top: 1550px; left: 5%; }
+.block:nth-child(17) { width: 95px; height: 95px; top: 1700px; left: 45%; }
+.block:nth-child(18) { width: 115px; height: 85px; top: 1750px; left: 75%; }
+.block:nth-child(19) { width: 55px; height: 55px; top: 1900px; left: 15%; }
+.block:nth-child(20) { width: 135px; height: 65px; top: 1950px; left: 60%; }
+.block:nth-child(21) { width: 85px; height: 85px; top: 1800px; left: 25%; }
+.block:nth-child(22) { width: 105px; height: 105px; top: 1650px; left: 65%; }
+.block:nth-child(23) { width: 75px; height: 75px; top: 1400px; left: 35%; }
+

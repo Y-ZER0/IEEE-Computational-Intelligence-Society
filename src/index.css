@@ -1,0 +1,88 @@
+:root {
+  --primary-white: #F5F5F5;
+  --primary-sky-blue: #2CABE2;
+  --secondary-black: #36454F;
+  --secondary-light-blue-gray: #E5F0F5;
+  --light-gradient: linear-gradient(to right, #F5F5F5, #29ABD8);
+  --dark-gradient: linear-gradient(to right, #36454F, #29ABD8);
+  --beige-background: #F5F0E3;
+
+  --light-bg: #f5f7f9;
+  --light-text: #333333;
+  --light-secondary-text: #555555;
+  --light-card-bg: #ffffff;
+  --light-accent: #2CABE2;
+  --light-secondary-bg: #E5F0F5;
+  --light-icon-bg: #E5F0F5;
+  
+    --dark-bg: #121212;
+    --dark-text: #ffffff;
+    --dark-secondary-text: #cccccc;
+    --dark-card-bg: #1e1e1e;
+    --dark-accent: #4cc3f0;
+    --dark-secondary-bg: #2a2a2a;
+    --dark-icon-bg: #2a2a2a;
+}
+
+body {
+  cursor: url('../public/images/robot-hand-cursor.svg') 11 2, auto;
+  margin: 0;
+  color: #36454F;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, button, [role="button"], input[type="submit"] {
+  cursor: url('../public/images/robot-hand-cursor.svg') 11 2, pointer;
+}
+
+
+.animate-section {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.animate-section.visible {
+  opacity: 1;
+}
+
+.animate-section:not(.visible) .leadership-title,
+.animate-section:not(.visible) .section-title,
+.animate-section:not(.visible) .section-subtitle,
+.animate-section:not(.visible) .leadership-card,
+.animate-section:not(.visible) .stat-card {
+  animation: none;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-section.visible .leadership-title,
+.animate-section.visible .section-title,
+.animate-section.visible .section-subtitle,
+.animate-section.visible .leadership-card,
+.animate-section.visible .stat-card {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  70% {
+      transform: translateY(-5px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+

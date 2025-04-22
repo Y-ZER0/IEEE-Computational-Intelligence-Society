@@ -1,0 +1,186 @@
+.ieee-cis-stats {
+  padding: 4rem 0;
+  position: relative;
+  bottom: 145px;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af, #0284c7);
+  color: #ffffff;
+}
+
+.ieee-cis-stats .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ieee-cis-stats .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.2s;
+}
+
+.ieee-cis-stats.is-visible .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ieee-cis-stats .section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.4s;
+}
+
+.ieee-cis-stats.is-visible .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ieee-cis-stats .stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.ieee-cis-stats .stat-card {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  will-change: transform, box-shadow;
+}
+
+.ieee-cis-stats.is-visible .stat-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.ieee-cis-stats.is-visible .stat-card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.ieee-cis-stats.is-visible .stat-card:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.ieee-cis-stats.is-visible .stat-card:nth-child(4) {
+  transition-delay: 0.1s;
+}
+
+.ieee-cis-stats.is-visible .stat-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Separate hover transitions with no delay */
+.ieee-cis-stats.is-visible .stat-card,
+.ieee-cis-stats.is-visible .stat-card > *,
+.ieee-cis-stats.is-visible .stat-card::after {
+  /* Apply hover transitions without affecting the initial appearance */
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0s; /* No delay for hover effects */
+}
+
+.ieee-cis-stats.is-visible .stat-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.ieee-cis-stats .stat-card > * {
+  will-change: transform;
+}
+
+.ieee-cis-stats.is-visible .stat-card:hover > * {
+  transform: scale(1.05);
+}
+
+.ieee-cis-stats.is-visible .stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(76, 195, 240, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.ieee-cis-stats.is-visible .stat-card:hover::after {
+  opacity: 1;
+}
+
+.ieee-cis-stats .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #4cc3f0;
+  position: relative;
+  left: 10px;
+}
+
+.ieee-cis-stats .stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.ieee-cis-stats .stat-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.ieee-cis-stats .stat-description {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ieee-cis-stats .stats-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ieee-cis-stats .stats-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .ieee-cis-stats .section-title {
+    font-size: 2rem;
+  }
+}

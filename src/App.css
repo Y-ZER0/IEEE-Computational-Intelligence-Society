@@ -1,0 +1,16 @@
+.dark-mode {
+  background: linear-gradient(135deg, var(--dark-card-bg) 0%, var(--dark-secondary-bg) 50%, #111 100%);
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #36454F;
+}
+
+.divider{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ top: 55px;
+}
+

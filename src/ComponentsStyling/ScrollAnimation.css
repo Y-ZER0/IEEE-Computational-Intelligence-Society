@@ -1,0 +1,58 @@
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scroll-reveal.delay-100 {
+    transition-delay: 0.1s;
+  }
+  
+  .scroll-reveal.delay-200 {
+    transition-delay: 0.2s;
+  }
+  
+  .scroll-reveal.delay-300 {
+    transition-delay: 0.3s;
+  }
+  
+  .scroll-reveal.delay-400 {
+    transition-delay: 0.4s;
+  }
+  
+  .scroll-reveal.slide-left {
+    transform: translateX(-50px);
+  }
+  
+  .scroll-reveal.slide-left.revealed {
+    transform: translateX(0);
+  }
+  
+  .scroll-reveal.slide-right {
+    transform: translateX(50px);
+  }
+  
+  .scroll-reveal.slide-right.revealed {
+    transform: translateX(0);
+  }
+  
+  .scroll-reveal.zoom-in {
+    transform: scale(0.9);
+  }
+  
+  .scroll-reveal.zoom-in.revealed {
+    transform: scale(1);
+  }
+  
+  .goals-container .scroll-reveal {
+    transition-duration: 1s;
+  }
+  
+  .teams-section .scroll-reveal {
+    transition-duration: 0.9s;
+  }

@@ -1,0 +1,457 @@
+.stars-of-month {
+  padding: 80px 0;
+  position: relative;
+  bottom: 145px;
+  overflow: hidden;
+}
+
+.stars-of-month::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, var(--light-secondary-bg) 0%, var(--light-bg) 100%);
+  z-index: -1;
+}
+
+.stars-of-month.dark-mode::before {
+  background: linear-gradient(to bottom, var(--dark-card-bg) 0%, var(--dark-secondary-bg) 100%);
+}
+
+.stars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stars-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--light-text);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.animate-section.visible .stars-title {
+  opacity: 1;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.dark-mode .stars-title {
+  color: var(--dark-text);
+}
+
+.stars-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--primary-sky-blue);
+  margin: 10px auto 0;
+  transform: scaleX(0);
+  transition: transform 0.8s ease 0.3s;
+}
+
+.animate-section.visible .stars-title::after {
+  transform: scaleX(1);
+}
+
+.stars-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: var(--light-secondary-text);
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.animate-section.visible .stars-subtitle {
+  opacity: 1;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.dark-mode .stars-subtitle {
+  color: var(--dark-secondary-text);
+}
+
+.stars-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.star-card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--light-card-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.animate-section.visible .star-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for each card */
+.animate-section.visible .star-card:nth-child(1) {
+  transition: all 0.6s ease 0.3s;
+}
+
+.animate-section.visible .star-card:nth-child(2) {
+  transition: all 0.6s ease 0.4s;
+}
+
+.animate-section.visible .star-card:nth-child(3) {
+  transition: all 0.6s ease 0.5s;
+}
+
+.animate-section.visible .star-card:nth-child(4) {
+  transition: all 0.6s ease 0.6s;
+}
+
+.animate-section.visible .star-card:nth-child(5) {
+  transition: all 0.6s ease 0.7s;
+}
+
+.animate-section.visible .star-card:nth-child(6) {
+  transition: all 0.6s ease 0.8s;
+}
+
+.dark-mode .star-card {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.star-card:hover, .star-card.active {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(44, 171, 226, 0.2);
+}
+
+.dark-mode .star-card:hover, .dark-mode .star-card.active {
+  box-shadow: 0 15px 30px rgba(76, 195, 240, 0.2);
+}
+
+.star-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.star-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  z-index: 1;
+  position: relative;
+  border: 4px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(to bottom, white, white), 
+                    linear-gradient(to bottom, var(--primary-sky-blue), #36454F);
+}
+
+.dark-mode .star-image {
+  background-image: linear-gradient(to bottom, var(--dark-card-bg), var(--dark-card-bg)), 
+                    linear-gradient(to bottom, var(--dark-accent), #fff);
+}
+
+.glow-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(44, 171, 226, 0.5), transparent 70%);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.star-card:hover .glow-effect, .star-card.active .glow-effect {
+  opacity: 0.7;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+.star-info {
+  text-align: center;
+  width: 100%;
+}
+
+.star-name {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.dark-mode .star-name {
+  color: var(--dark-text);
+}
+
+.star-role {
+  color: var(--primary-sky-blue);
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.dark-mode .star-role {
+  color: var(--dark-accent);
+}
+
+.star-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.star-card:hover .star-details, .star-card.active .star-details {
+  max-height: 100px;
+}
+
+.star-achievement {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--light-secondary-text);
+  margin: 5px 0;
+}
+
+.dark-mode .star-achievement {
+  color: var(--dark-secondary-text);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(40px);
+  }
+  60% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (min-width: 1440px) {
+.stars-container {
+  max-width: 1400px;
+}
+
+.stars-carousel {
+  gap: 40px;
+}
+
+.star-card {
+  width: 220px;
+}
+
+.star-image-container {
+  width: 170px;
+  height: 170px;
+}
+
+.stars-title {
+  font-size: 3rem;
+}
+
+.stars-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+.stars-container {
+  max-width: 1200px;
+}
+
+.stars-carousel {
+  gap: 30px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.stars-of-month {
+  padding: 60px 0;
+}
+
+.stars-carousel {
+  gap: 20px;
+}
+
+.star-card {
+  width: 170px;
+  padding: 15px;
+}
+
+.star-image-container {
+  width: 120px;
+  height: 120px;
+}
+
+.stars-title {
+  font-size: 2.2rem;
+}
+
+.stars-subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+.stars-of-month {
+  padding: 50px 0;
+}
+
+.stars-carousel {
+  gap: 15px;
+  justify-content: center;
+}
+
+.star-card {
+  width: 160px;
+  padding: 15px;
+}
+
+.star-image-container {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+.stars-title {
+  font-size: 2rem;
+}
+
+.stars-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.star-name {
+  font-size: 1.1rem;
+}
+
+.star-role {
+  font-size: 0.85rem;
+}
+}
+
+@media (max-width: 575px) {
+.stars-of-month {
+  padding: 40px 0;
+}
+
+.stars-container {
+  padding: 0 15px;
+}
+
+.stars-carousel {
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.star-card {
+  width: 240px;
+  padding: 20px;
+}
+
+.star-image-container {
+  width: 140px;
+  height: 140px;
+}
+
+.stars-title {
+  font-size: 1.8rem;
+}
+
+.stars-subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.star-details {
+  max-height: 100px;
+}
+
+.star-achievement {
+  font-size: 0.8rem;
+}
+}
+
+@media (max-width: 375px) {
+.star-card {
+  width: 220px;
+}
+
+.star-image-container {
+  width: 120px;
+  height: 120px;
+}
+}
