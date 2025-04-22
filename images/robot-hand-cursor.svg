@@ -1,0 +1,39 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Robot Wrist/Base -->
+  <rect x="8" y="22" width="12" height="8" rx="2" fill="#36454F" stroke="#F5F5F5" stroke-width="1"/>
+  
+  <!-- Palm -->
+  <rect x="8" y="12" width="12" height="10" rx="1" fill="#2CABE2" stroke="#F5F5F5" stroke-width="1"/>
+  
+  <!-- Thumb -->
+  <rect x="5" y="16" width="3" height="6" rx="1" fill="#36454F" stroke="#F5F5F5" stroke-width="0.5"/>
+  
+  <!-- Index Finger (Pointing) -->
+  <rect x="10" y="2" width="3" height="10" rx="1" fill="#36454F" stroke="#F5F5F5" stroke-width="0.5"/>
+  <circle cx="11.5" cy="2" r="1" fill="#2CABE2"/>
+  
+  <!-- Middle Finger -->
+  <rect x="14" y="5" width="3" height="7" rx="1" fill="#36454F" stroke="#F5F5F5" stroke-width="0.5"/>
+  <circle cx="15.5" cy="5" r="1" fill="#2CABE2"/>
+  
+  <!-- Ring Finger -->
+  <rect x="18" y="6" width="3" height="6" rx="1" fill="#36454F" stroke="#F5F5F5" stroke-width="0.5"/>
+  <circle cx="19.5" cy="6" r="1" fill="#2CABE2"/>
+  
+  <!-- Little Finger -->
+  <rect x="22" y="8" width="2.5" height="5" rx="1" fill="#36454F" stroke="#F5F5F5" stroke-width="0.5"/>
+  <circle cx="23.25" cy="8" r="0.8" fill="#2CABE2"/>
+  
+  <!-- Joint Details -->
+  <line x1="11.5" y1="7" x2="11.5" y2="7" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round"/>
+  <line x1="15.5" y1="8" x2="15.5" y2="8" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round"/>
+  <line x1="19.5" y1="9" x2="19.5" y2="9" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round"/>
+  <line x1="23.25" y1="10" x2="23.25" y2="10" stroke="#F5F5F5" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Mechanical Details -->
+  <line x1="10" y1="19" x2="18" y2="19" stroke="#F5F5F5" stroke-width="0.5" stroke-dasharray="1,1"/>
+  <line x1="10" y1="16" x2="18" y2="16" stroke="#F5F5F5" stroke-width="0.5" stroke-dasharray="1,1"/>
+  
+  <!-- Cursor Point -->
+  <circle cx="11.5" cy="2" r="0.5" fill="#F5F5F5"/>
+</svg>
