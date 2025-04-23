@@ -175,6 +175,14 @@
   }
 }
 
+@media (max-width: 575px)
+{
+  .ieee-cis-stats .icon-container {   
+     position: relative;
+     left: 0px;
+  }
+}
+
 @media (max-width: 480px) {
   .ieee-cis-stats .stats-container {
     grid-template-columns: 1fr;
@@ -183,4 +191,9 @@
   .ieee-cis-stats .section-title {
     font-size: 2rem;
   }
+
+  .ieee-cis-stats .icon-container {   
+    position: relative;
+    left: 0px;
+ }
 }
