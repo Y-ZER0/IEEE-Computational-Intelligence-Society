@@ -3,7 +3,7 @@
   position: relative;
   bottom: 145px;
   overflow: hidden;
-  background-color: #4c77a9;
+  background-color: #65d1ec;
   background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
 }
 
@@ -327,11 +327,7 @@
     left: 19px;
   }
 
-  .left{
-    left: 1.5px;
-  }
-  
-  .right {
+  .left , .right{
     left: 1.5px;
   }
   
@@ -350,51 +346,113 @@
 
 @media screen and (max-width: 575px) {
   .events-workshops {
-    padding: 40px 0;
-    bottom: 80px;
+    padding: 30px 0; 
+    bottom: 70px; 
     width: 100%;
+    overflow-x: hidden; 
   }
   
   .container {
-    padding: 0 15px;
+    padding: 0 12px; 
     width: 100%;
+    max-width: 100%;
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem; 
+    margin-bottom: 0.8rem; 
   }
   
   .section-description {
-    font-size: 1rem;
-    margin-bottom: 40px;
+    font-size: 0.95rem; 
+    margin-bottom: 30px; 
+    line-height: 1.4; 
+  }
+  
+  .timeline {
+    margin-left: 15px;
+  }
+  
+  .timeline::after {
+    left: 0;
+    width: 2px; 
   }
   
   .timeline-item {
-    padding: 10px 20px;
-    width: 100%;
+    padding: 8px 15px 8px 25px; 
+    width: calc(100% - 20px); 
+    margin-bottom: 20px; 
   }
   
   .left, .right {
     left: 0;
+    right: auto;
+    position: relative;
+    left: -2.2px;
   }
   
-  .timeline::after {
-    left: 31px;
+  .timeline-item::after {
+    width: 12px; 
+    height: 12px;
+    left: -6px; 
+  }
+  
+  .event-title {
+    font-size: 1.3rem; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-date {
+    font-size: 0.85rem; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-description {
+    font-size: 0.9rem; 
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
   }
   
   .event-image {
-    height: 180px;
+    height: 160px; 
+    margin-bottom: 0.8rem;
+  }
+  
+  .btn {
+    padding: 6px 12px; 
+    font-size: 0.9rem;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 30px;
   }
 }
 
-/* Add focus styles for accessibility */
+@media screen and (max-width: 375px) {
+  .events-workshops {
+    padding: 25px 0;
+    bottom: 65px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .event-image {
+    height: 140px;
+  }
+  
+  .timeline-item {
+    padding: 8px 12px 8px 22px;
+  }
+}
+
 .learn-more-btn:focus,
 .close-modal-btn:focus {
   outline: 2px solid var(--primary-sky-blue);
   outline-offset: 2px;
 }
 
-/* Add transition for smoother UX */
 .event-modal-overlay,
 .event-modal-content {
   transition: opacity 0.3s ease;

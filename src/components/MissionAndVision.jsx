@@ -63,13 +63,7 @@ const MissionAndVision = () => {
           <p>
             To foster cutting-edge research, education, and ethical practices in computational intelligence and AI. We unite researchers, practitioners, and educators to develop adaptive systems that solve real-world challenges while promoting inclusivity, transparency, and societal benefit.
           </p>
-          <a href="/">
-            Learn About Our Mission
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+          
         </div>
 
         <div 
@@ -89,13 +83,7 @@ const MissionAndVision = () => {
           <p>
             To be the global catalyst for AI-driven transformation, where computational intelligence empowers sustainable progress. We envision a world where ethical AI systems enhance human capabilities, bridge societal divides, and inspire breakthroughs across industries and communities.
           </p>
-          <a href="/">
-            Explore Our Vision
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+          
         </div>
       </div>
     </div>

@@ -3,11 +3,11 @@
     bottom: 175px;
     width: 100%;
     overflow: hidden;
-    background-color: #e4f9fc;
+    background: linear-gradient(to right, #F5F5F5, #29ABD8);
     background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
     padding: 5rem 0;
-    margin-top: 2rem; /* Add positive margin instead of negative positioning */
-}
+    margin-top: 2rem;
+  }
 
 .news-slider-wrapper {
     max-width: 1200px;
@@ -18,12 +18,12 @@
 .ai-insights-heading {
     position: relative;
     display: inline-block;
-    background: linear-gradient(45deg, var(--primary-sky-blue), #7928ca);
+    background: linear-gradient(to right, #29ABD8, #29ABD8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: all 0.3s ease;
-}
+  }
 
 .ai-insights-heading::before {
     content: '';
@@ -32,7 +32,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-sky-blue), #7928ca);
+    background: linear-gradient(90deg, var(--primary-sky-blue), #3ccece);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s ease-in-out;
@@ -370,6 +370,10 @@
 
 /* Small Mobile */
 @media (max-width: 575px) {
+    .news-slider-container {
+        margin-top: 95px;
+    }
+
     .news-slider-wrapper {
         padding: 0 0.75rem;
     }

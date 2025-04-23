@@ -60,7 +60,7 @@ const AboutUsSection = () => {
         >
           <h2 className="about-us-title">About IEEE CIS UJ Society</h2>
           <p className="about-us-description">
-            We are a student led club that belongs to the Institute of Electrical and Electronics Engineering (IEEE) Computer Society which is a world-leading organization dedicated to computer society and technology. This society is situated at the University of Jordan, the King Abdullah || School for information Technology Since 2017.
+            We are a student led club that belongs to the Institute of Electrical and Electronics Engineering (IEEE) Computer Intelligence Society which is a world-leading organization dedicated to computer Intelligence society and technology. This society is situated at the University of Jordan, the King Abdullah || School for information Technology Since 2017.
           </p>
           <div className="about-us-highlights">
             {[

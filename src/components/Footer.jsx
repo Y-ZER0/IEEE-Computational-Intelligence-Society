@@ -33,7 +33,7 @@ const Footer = ({ isDarkMode }) => {
           </div>
           <div className="brand-content">
             <h3>IEEE CIS UJ</h3>
-            <p>We are a student led club that belongs to the Institute of Electrical and Electronics Engineering (IEEE) Computer Society which is a world-leading organization dedicated to computer society and technology.</p>
+            <p>We are a student led club that belongs to the Institute of Electrical and Electronics Engineering (IEEE) Computer Intelligence Society which is a world-leading organization dedicated to computer Intelligence society and technology.</p>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ const Footer = ({ isDarkMode }) => {
             <li><a href="#about-us" onClick={(e) => handleNavLinkClick(e, '#about-us')}><FaChevronRight className="nav-icon" /> About Us</a></li>
             <li><a href="#mission-vision" onClick={(e) => handleNavLinkClick(e, '#mission-vision')}><FaChevronRight className="nav-icon" /> Mission & Vision</a></li>
             <li><a href="#goals" onClick={(e) => handleNavLinkClick(e, '#goals')}><FaChevronRight className="nav-icon" /> Our Goals</a></li>
-            <li><a href="#team-in-numbers" onClick={(e) => handleNavLinkClick(e, '#team-in-numbers')}><FaChevronRight className="nav-icon" /> We in Numbers</a></li>
+            <li><a href="#team-in-numbers" onClick={(e) => handleNavLinkClick(e, '#team-in-numbers')}><FaChevronRight className="nav-icon" /> Us in Numbers</a></li>
           </ul>
         </div>
 
