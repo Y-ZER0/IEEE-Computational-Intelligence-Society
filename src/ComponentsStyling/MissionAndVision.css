@@ -1,15 +1,28 @@
 .mission-vision-container {
   background-color: #000000;
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-  padding: 3rem 1rem;
-  margin-top: 1rem;
+  background-size: 300px;
+  padding: 4rem 1rem;
+  margin: 4rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
   position: relative;
-  bottom: 145px; 
+  bottom: 110px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.mission-vision-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .mission-vision-heading {
@@ -38,6 +51,8 @@
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 .feature-card {
@@ -73,6 +88,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   z-index: 2;
 }
+
 .feature-card > * {
   will-change: transform;
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -104,7 +120,7 @@
 .card-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  animation: gentlePulse 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); /* Smoother animation with cubic bezier */
+  animation: gentlePulse 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,22 +181,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .feature-cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .feature-card {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .mission-vision-heading h2 {
-    font-size: 1.8rem;
-  }
-}
-
+/* Animation delays */
 .mission-vision-heading.animated-element {
   transition-delay: 0.1s;
 }
@@ -191,4 +192,134 @@
 
 .feature-card.animated-element:nth-child(2) {
   transition-delay: 0.4s;
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .mission-vision-container {
+    bottom: 75px; 
+    padding: 3rem 1rem;
+    margin: 3rem 0 0 0;
+  }
+}
+
+@media (max-width: 1022px) {
+  .mission-vision-container {
+    padding: 2rem 1rem;
+    margin: 0 0 0 0;
+    position: relative;
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-container {
+    padding: 2rem 1rem;
+    bottom: 110px;
+    margin: 2rem 0 0 0;
+  }
+  
+  .feature-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    padding: 1.5rem;
+  }
+  
+  .mission-vision-heading h2 {
+    font-size: 1.8rem;
+  }
+  
+  .mission-vision-heading p {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision-container {
+    padding: 1.5rem 0.75rem;
+    bottom: 70px; 
+    margin: 1.5rem 0 0 0;
+  }
+  
+  .mission-vision-heading {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-vision-heading h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mission-vision-heading p {
+    font-size: 1rem;
+  }
+  
+  .feature-card {
+    padding: 1.25rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .feature-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+  }
+}
+
+.feature-card {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  @keyframes gentlePulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02); 
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animated-element.animate-in .feature-card {
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease,
+                opacity 0.4s ease;
+  }
+}
+.mission-vision-heading.animated-element {
+  transition-delay: 0.1s;
+}
+
+.feature-card.animated-element:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.feature-card.animated-element:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+@media (min-width: 1000px) and (max-width: 1050px) {
+  
+  .mission-vision-container {
+    bottom: 80px;
+  }
 }

@@ -1,16 +1,15 @@
+:root {
+  --transition-speed: 0.3s;
+}
+
 .dark-mode {
   background: linear-gradient(135deg, var(--dark-card-bg) 0%, var(--dark-secondary-bg) 50%, #111 100%);
+  color: var(--dark-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 .light-mode {
   background-color: #fff;
-  color: #36454F;
+  color: var(--light-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
-
-.divider{
- display: flex;
- flex-direction: column;
- position: relative;
- top: 55px;
-}
-

@@ -302,7 +302,6 @@
   margin-bottom: 15px;
 }
 
-/* Make modal scrollable on mobile */
 @media screen and (max-height: 700px) {
   .event-modal-content {
     max-height: 85vh;
@@ -327,9 +326,13 @@
   .timeline-item::after {
     left: 19px;
   }
+
+  .left{
+    left: 1.5px;
+  }
   
   .right {
-    left: 0%;
+    left: 1.5px;
   }
   
   .event-modal-content {
@@ -342,6 +345,45 @@
   
   .modal-header h2 {
     font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .events-workshops {
+    padding: 40px 0;
+    bottom: 80px;
+    width: 100%;
+  }
+  
+  .container {
+    padding: 0 15px;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-item {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .left, .right {
+    left: 0;
+  }
+  
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .event-image {
+    height: 180px;
   }
 }
 

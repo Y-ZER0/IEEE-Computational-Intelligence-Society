@@ -225,59 +225,125 @@
   left: 100%;
 }
 
-/* Responsive Styles */
+/* Additions for HeroContent.css - Add these to the end of your existing HeroContent.css file */
+
+/* Fix existing mobile breakpoints */
 @media (max-width: 1024px) {
   .hero-container {
     flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .hero-globe-section, .hero-content-section {
     width: 100%;
-  }
-  
-  .hero-globe-section {
-    height: 50vh;
-  }
-  
-  .hero-content-section {
-    padding: 2rem;
-    align-items: center;
-  }
-  
-  .social-icons {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    flex-direction: row;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    justify-content: center;
-  }
-  
-  .hero-content {
-    max-width: 100%;
+    max-width: 100vw;
   }
 }
 
+/* Improve tablet styles */
 @media (max-width: 768px) {
   .hero-container {
     padding: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .hero-globe-section {
     height: 40vh;
+    width: 100%;
   }
   
   .hero-content {
     padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .social-icons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Enhanced mobile styles */
+@media screen and (max-width: 480px) {
+  .hero-container {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 100vw;
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+  }
+  
+  .hero-globe-section {
+    height: 30vh;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  .hero-content-section {
+    width: 100%;
+    padding: 1rem;
+    max-width: 100vw;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .social-icons {
+    padding: 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .social-icon-link {
+    width: 35px;
+    height: 35px;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn--primary {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Fix for small-height mobile devices */
+@media (max-height: 700px) and (max-width: 480px) {
+  .hero-container {
+    min-height: auto;
+  }
+  
+  .hero-globe-section {
+    height: 25vh;
+  }
+}
+
+/* Fix for backdrop-filter which can cause issues on some mobile browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  .hero-content {
+    background: rgba(10, 10, 26, 0.8);
   }
 }

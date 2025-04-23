@@ -28,18 +28,16 @@ function App() {
       <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode}
       id = "home"/>
       <AboutUs />
-      <div className='divider'>
-        <MissionAndVision/>
-        <GoalsAndObjectives/>
-        <IEEECISStats />
-        <LeadershipSection /> 
-        <TeamsSection/>
-        <StarsOfMonth isDarkMode={isDarkMode} /> 
-        <EventsWorkshops/>
-        <Blog/>
-        <WebMasters/> 
-        <Footer isDarkMode={isDarkMode} />
-      </div>
+      <MissionAndVision/>
+      <GoalsAndObjectives/>
+      <IEEECISStats />
+      <LeadershipSection /> 
+      <TeamsSection/>
+      <StarsOfMonth isDarkMode={isDarkMode} /> 
+      <EventsWorkshops/>
+      <Blog/>
+      <WebMasters/> 
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 

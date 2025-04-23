@@ -58,7 +58,7 @@ const GoalsAndObjectives = () => {
           ref={leftSectionRef}
         >
           <div className="pattern-background">
-            <img src={`${process.env.PUBLIC_URL}/images/Firefly blue and white ai robot in the future 98366.jpg`} alt="AI Robot" className="robot-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/GroupPhotoMain.jpg`} alt="AI Robot" className="group-image" />
           </div>
           <div className="setup-text">
             <h2>Thoughtful AI Planning</h2>
@@ -98,7 +98,6 @@ const GoalsAndObjectives = () => {
               );
             })}
           </div>
-          <button className="explore-button">Explore Initiatives</button>
         </div>
       </div>
     </div>

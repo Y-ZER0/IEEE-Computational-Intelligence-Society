@@ -56,8 +56,8 @@
   background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
 }
 
-.robot-image {
-  width: 75%;
+.group-image {
+  width: 90%;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
@@ -65,7 +65,7 @@
   transition: transform 0.3s ease;
 }
 
-.robot-image:hover {
+.group-image:hover {
   transform: scale(1.02);
 }
 
@@ -347,17 +347,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   color: var(--about-us-text-dark);
 }
 
-.explore-button {
-  margin-top: 40px;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 .light-mode .explore-button {
   background-color: var(--light-accent);
   color: white;
@@ -524,7 +513,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 @media (max-width: 575px) {
   .goals-container {
     padding: 50px 0;
-    bottom: 100px;
   }
   
   .goals-content {

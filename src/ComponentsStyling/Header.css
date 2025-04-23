@@ -236,7 +236,6 @@ section.hero {
 @media screen and (max-width: 768px) {
   .main-header {
     height: 90px;
-    padding: 0.5rem 5%;
   }
   
   .mobile-menu-toggle {
@@ -310,12 +309,14 @@ section.hero {
   section.hero {
     padding-top: 100px;
   }
+
+  .about-us-section {
+    padding-top: 100px; 
 }
 
 @media screen and (max-width: 480px) {
   .main-header {
     height: 80px; 
-    padding: 0.5rem 3%;
   }
   
   .header-nav {
@@ -329,4 +330,8 @@ section.hero {
   section.hero {
     padding-top: 90px; 
   }
-}
+
+  .about-us-section {
+    padding-top: 90px;
+  }
+}}
