@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/IEEE-Computational-Intelligence-Society/static/css/main.158b1d2f.css",
+    "main.css": "/IEEE-Computational-Intelligence-Society/static/css/main.c599a715.css",
     "main.js": "/IEEE-Computational-Intelligence-Society/static/js/main.2edc51a4.js",
     "static/js/453.ed3810f9.chunk.js": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js",
     "static/media/robot-hand-cursor.svg": "/IEEE-Computational-Intelligence-Society/static/media/robot-hand-cursor.bcec163182d4f149d92d.svg",
     "index.html": "/IEEE-Computational-Intelligence-Society/index.html",
-    "main.158b1d2f.css.map": "/IEEE-Computational-Intelligence-Society/static/css/main.158b1d2f.css.map",
+    "main.c599a715.css.map": "/IEEE-Computational-Intelligence-Society/static/css/main.c599a715.css.map",
     "main.2edc51a4.js.map": "/IEEE-Computational-Intelligence-Society/static/js/main.2edc51a4.js.map",
     "453.ed3810f9.chunk.js.map": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.158b1d2f.css",
+    "static/css/main.c599a715.css",
     "static/js/main.2edc51a4.js"
   ]
 }
