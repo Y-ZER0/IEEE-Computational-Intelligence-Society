@@ -25,19 +25,19 @@ const Blog = ({ isDarkMode }) => {
       id: 1,
       title: "AI's Creative Revolution",
       image: `${process.env.PUBLIC_URL}/images/Firefly blue and white ai robot in the future 52506.jpg`,
-      description: "Exploring how generative AI is revolutionizing content creation, design, and artistic expression across multiple sectors."
+      description: "Coming soon..."
     },
     {
       id: 2,
       title: "Ethical AI Frontiers",
       image: `${process.env.PUBLIC_URL}/images/Firefly blue and white ai robot in the future 12670.jpg`,
-      description: "Deep dive into the critical considerations and frameworks for responsible artificial intelligence implementation."
+      description: "Coming soon..."
     },
     {
       id: 3,
       title: "ML Transforming Healthcare",
       image: `${process.env.PUBLIC_URL}/images/Firefly blue and white ai robot in the future 98366.jpg`,
-      description: "Breakthrough algorithms enabling more precise diagnostics and personalized treatment strategies in medical research."
+      description: "Coming soon..."
     }
   ];
 
