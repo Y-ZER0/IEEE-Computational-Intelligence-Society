@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/IEEE-Computational-Intelligence-Society/static/css/main.ba9bd17e.css",
-    "main.js": "/IEEE-Computational-Intelligence-Society/static/js/main.fd4b17c8.js",
+    "main.css": "/IEEE-Computational-Intelligence-Society/static/css/main.64a721c6.css",
+    "main.js": "/IEEE-Computational-Intelligence-Society/static/js/main.1574ca6d.js",
     "static/js/453.ed3810f9.chunk.js": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js",
     "static/media/robot-hand-cursor.svg": "/IEEE-Computational-Intelligence-Society/static/media/robot-hand-cursor.bcec163182d4f149d92d.svg",
     "index.html": "/IEEE-Computational-Intelligence-Society/index.html",
-    "main.ba9bd17e.css.map": "/IEEE-Computational-Intelligence-Society/static/css/main.ba9bd17e.css.map",
-    "main.fd4b17c8.js.map": "/IEEE-Computational-Intelligence-Society/static/js/main.fd4b17c8.js.map",
+    "main.64a721c6.css.map": "/IEEE-Computational-Intelligence-Society/static/css/main.64a721c6.css.map",
+    "main.1574ca6d.js.map": "/IEEE-Computational-Intelligence-Society/static/js/main.1574ca6d.js.map",
     "453.ed3810f9.chunk.js.map": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba9bd17e.css",
-    "static/js/main.fd4b17c8.js"
+    "static/css/main.64a721c6.css",
+    "static/js/main.1574ca6d.js"
   ]
 }
