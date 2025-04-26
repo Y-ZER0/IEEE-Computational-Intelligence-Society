@@ -2,8 +2,9 @@
   padding: 4rem 0;
   position: relative;
   bottom: 145px;
-  background: linear-gradient(135deg, #1e3a8a, #1e40af, #0284c7);
+  background: linear-gradient(135deg, #0078a8, #2CABE2, #63d8ff);
   color: #ffffff;
+  transition: color var(--transition-speed);
 }
 
 .ieee-cis-stats .container {
@@ -52,7 +53,8 @@
   gap: 2rem;
 }
 
-.ieee-cis-stats .stat-card {
+/* Light mode stat card */
+.light-mode .ieee-cis-stats .stat-card {
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
@@ -72,6 +74,31 @@
   position: relative;
   z-index: 1;
   will-change: transform, box-shadow;
+  color: #ffffff;
+}
+
+/* Dark mode stat card - keeping same background but changing text to modern black */
+.dark-mode .ieee-cis-stats .stat-card {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque in dark mode */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  will-change: transform, box-shadow;
+  color: #212121; /* Modern black color for text in dark mode */
 }
 
 .ieee-cis-stats.is-visible .stat-card:nth-child(1) {
@@ -137,7 +164,7 @@
   opacity: 1;
 }
 
-.ieee-cis-stats .icon-container {
+.light-mode .ieee-cis-stats .icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,27 +173,65 @@
   border-radius: 50%;
   margin-bottom: 1.5rem;
   background-color: rgba(255, 255, 255, 0.15);
-  color: #4cc3f0;
+  color: #ffffff;
   position: relative;
   left: 10px;
 }
 
-.ieee-cis-stats .stat-value {
+.dark-mode .ieee-cis-stats .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1a1a1a; /* Dark icon color to match text */
+  position: relative;
+  left: 10px;
+}
+
+.light-mode .ieee-cis-stats .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
+  color: #ffffff;
 }
 
-.ieee-cis-stats .stat-title {
+.light-mode .ieee-cis-stats .stat-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0 1rem;
+  color: #ffffff;
 }
 
-.ieee-cis-stats .stat-description {
+.light-mode .ieee-cis-stats .stat-description {
   font-size: 0.95rem;
   opacity: 0.8;
   margin: 0;
+  color: #ffffff;
+}
+
+.dark-mode .ieee-cis-stats .stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #212121; 
+}
+
+.dark-mode .ieee-cis-stats .stat-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #212121; 
+}
+
+.dark-mode .ieee-cis-stats .stat-description {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+  color: #212121; 
 }
 
 @media (max-width: 768px) {
@@ -175,8 +240,7 @@
   }
 }
 
-@media (max-width: 575px)
-{
+@media (max-width: 575px) {
   .ieee-cis-stats .icon-container {   
      position: relative;
      left: 0px;
@@ -195,5 +259,13 @@
   .ieee-cis-stats .icon-container {   
     position: relative;
     left: 0px;
- }
+  }
+}
+
+.dark-mode .section-title {
+  color: #ffffff; 
+}
+
+.dark-mode .section-subtitle {
+  color: #ffffff; 
 }

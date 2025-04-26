@@ -1,7 +1,8 @@
 .mission-vision-container {
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-  background-size: 300px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  position: relative;
+  bottom: 110px;
+  z-index: 1;
   padding: 4rem 1rem;
   margin: 4rem 0 0 0;
   display: flex;
@@ -9,27 +10,42 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  position: relative;
-  bottom: 110px;
-  z-index: 1;
   overflow: hidden;
 }
 
+/* Updated background to match Stars of Month */
 .mission-vision-container::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, var(--light-secondary-bg) 0%, var(--light-bg) 100%);
   z-index: -1;
 }
 
+.dark-mode .mission-vision-container::before {
+  background: linear-gradient(to bottom, var(--dark-card-bg) 0%, var(--dark-secondary-bg) 100%);
+}
+
 .mission-vision-heading {
-  color: white;
+  color: var(--light-text);
   text-align: center;
   margin-bottom: 2.5rem;
   max-width: 800px;
+  position: relative;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.animate-section.visible .mission-vision-heading {
+  opacity: 1;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.dark-mode .mission-vision-heading {
+  color: var(--dark-text);
 }
 
 .mission-vision-heading h2 {
@@ -38,9 +54,29 @@
   font-weight: 600;
 }
 
+.mission-vision-heading h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--primary-sky-blue);
+  margin: 10px auto 0;
+  transform: scaleX(0);
+  transition: transform 0.8s ease 0.3s;
+}
+
+.animate-section.visible .mission-vision-heading h2::after {
+  transform: scaleX(1);
+}
+
 .mission-vision-heading p {
   font-size: 1.2rem;
   opacity: 0.9;
+  color: var(--light-secondary-text);
+}
+
+.dark-mode .mission-vision-heading p {
+  color: var(--dark-secondary-text);
 }
 
 .feature-cards-container {
@@ -56,108 +92,121 @@
 }
 
 .feature-card {
-  background-color: #a1a3a2;
-  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-  border-radius: 12px;
+  background-color: var(--light-card-bg);
+  border-radius: 20px;
   padding: 2rem;
   flex: 1;
   min-width: 280px;
   max-width: 500px;
-  transition-property: opacity, transform;
-  transition-duration: 0.8s;
-  transition-timing-function: ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  will-change: transform, box-shadow;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.animated-element.animate-in .feature-card {
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-              opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition-delay: 0s;
+.animate-section.visible .feature-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for cards */
+.animate-section.visible .feature-card:nth-child(1) {
+  transition: all 0.6s ease 0.3s;
+}
+
+.animate-section.visible .feature-card:nth-child(2) {
+  transition: all 0.6s ease 0.4s;
+}
+
+.animate-section.visible .feature-card:nth-child(3) {
+  transition: all 0.6s ease 0.5s;
+}
+
+.dark-mode .feature-card {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .feature-card:hover {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  z-index: 2;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(44, 171, 226, 0.2);
 }
 
-.feature-card > * {
-  will-change: transform;
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.feature-card:hover > * {
-  transform: scale(1.05);
-}
-
-.feature-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(76, 195, 240, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  will-change: opacity;
-  pointer-events: none;
-  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  z-index: -1;
-}
-
-.feature-card:hover::after {
-  opacity: 1;
+.dark-mode .feature-card:hover {
+  box-shadow: 0 15px 30px rgba(76, 195, 240, 0.2);
 }
 
 .card-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  animation: gentlePulse 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: pulse 2s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #36454F;
+  color: var(--primary-sky-blue);
+}
+
+.dark-mode .card-icon {
+  color: var(--dark-accent);
 }
 
 .feature-card h3 {
   font-size: 1.6rem;
-  color: #000000;
+  color: var(--light-text);
   margin-bottom: 1rem;
+}
+
+.dark-mode .feature-card h3 {
+  color: var(--dark-text);
 }
 
 .feature-card h4 {
   font-size: 1.3rem;
-  color: #0F5D7F;
+  color: var(--primary-sky-blue);
   margin-bottom: 1rem;
+}
+
+.dark-mode .feature-card h4 {
+  color: var(--dark-accent);
 }
 
 .feature-card p {
   margin-bottom: 1.5rem;
-  color: #000000;
+  color: var(--light-secondary-text);
   line-height: 1.6;
 }
 
+.dark-mode .feature-card p {
+  color: var(--dark-secondary-text);
+}
+
 .feature-card a {
-  color: #0F5D7F;
+  color: var(--primary-sky-blue);
   text-decoration: none;
   font-weight: 600;
   display: flex;
   align-items: center;
   margin-top: auto;
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.4s ease, color 0.4s ease;
 }
 
 .feature-card a:hover {
   color: #107daa;
   transform: translateX(5px);
+}
+
+.dark-mode .feature-card a {
+  color: var(--dark-accent);
+}
+
+.dark-mode .feature-card a:hover {
+  color: #6ed0f7;
 }
 
 .feature-card a svg {
@@ -169,31 +218,45 @@
   transform: translateX(3px);
 }
 
-@keyframes gentlePulse {
+/* Animations keyframes */
+@keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(0.95);
+    opacity: 0.5;
   }
-  50% {
-    transform: scale(1.03);
+  70% {
+    transform: scale(1.05);
+    opacity: 0.7;
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.95);
+    opacity: 0.5;
   }
 }
 
-/* Animation delays */
-.mission-vision-heading.animated-element {
-  transition-delay: 0.1s;
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.feature-card.animated-element:nth-child(1) {
-  transition-delay: 0.2s;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.feature-card.animated-element:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
+/* Media Queries */
 @media (max-width: 1023px) and (min-width: 769px) {
   .mission-vision-container {
     bottom: 75px; 
@@ -205,7 +268,7 @@
 @media (max-width: 1022px) {
   .mission-vision-container {
     padding: 2rem 1rem;
-    margin: 0 0 0 0;
+    margin: 0;
     position: relative;
     bottom: 100px;
   }
@@ -241,7 +304,7 @@
   }
   
   .feature-card:hover {
-    transform: translateY(-5px) scale(1.01);
+    transform: translateY(-5px);
   }
 }
 
@@ -286,39 +349,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  @keyframes gentlePulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.02); 
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  .animated-element.animate-in .feature-card {
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease,
-                opacity 0.4s ease;
-  }
-}
-.mission-vision-heading.animated-element {
-  transition-delay: 0.1s;
-}
-
-.feature-card.animated-element:nth-child(1) {
-  transition-delay: 0.2s;
-}
-
-.feature-card.animated-element:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
 @media (min-width: 1000px) and (max-width: 1050px) {
-  
   .mission-vision-container {
     bottom: 80px;
   }

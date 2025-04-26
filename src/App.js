@@ -13,7 +13,8 @@ import WebMasters from './components/WebMasters';
 import EventsWorkshops from './components/EventsWorkshops';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
-import FAQ from "./components/FAQ"
+import FAQ from "./components/FAQ";
+import AllEvents from './components/AllEvents'; // Import the new AllEvents component
  
 function App() {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -25,8 +26,7 @@ function App() {
   // Main home page layout
   const HomePage = () => (
     <>
-      <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode}
-      id = "home"/>
+      <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode} currentPage="home" />
       <AboutUs />
       <MissionAndVision/>
       <GoalsAndObjectives/>
@@ -34,9 +34,18 @@ function App() {
       <LeadershipSection /> 
       <TeamsSection/>
       <StarsOfMonth isDarkMode={isDarkMode} /> 
-      <EventsWorkshops/>
+      <EventsWorkshops limit={6} showExploreMore={true} /> {/* Limit to 6 events */}
       <Blog/>
       <WebMasters/> 
+      <Footer isDarkMode={isDarkMode} />
+    </>
+  );
+
+  // All events page layout
+  const EventsPage = () => (
+    <>
+      <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode} minimal={true} currentPage="events" />
+      <AllEvents />
       <Footer isDarkMode={isDarkMode} />
     </>
   );
@@ -47,6 +56,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/faq" element={<FAQ onToggleTheme={toggleTheme} isDarkMode={isDarkMode} />} />
+          <Route path="/all-events" element={<EventsPage />} />
         </Routes>
       </div>
     </Router>

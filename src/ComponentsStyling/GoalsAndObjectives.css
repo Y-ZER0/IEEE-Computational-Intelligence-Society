@@ -47,12 +47,11 @@
 }
 
 .light-mode .pattern-background {
-  background-color: #00d3de;
+  background-color: #2CABE2;
   background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
 }
 
 .dark-mode .pattern-background {
-  background-color: var(--about-us-secondary-accent-dark);
   background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
 }
 
@@ -420,7 +419,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   }
   
   .pattern-background {
-    height: 300px;
+    height: 100px;
   }
   
   .icon-container {
@@ -439,7 +438,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .goals-container {
     padding: 50px 20px; 
     overflow-x: hidden; 
@@ -598,21 +597,5 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   
   .objective-content p {
     font-size: 0.95rem;
-  }
-  
-  .demo-button,
-  .explore-button {
-    width: 100%;
-    text-align: center;
-    padding: 12px 20px;
-    box-sizing: border-box;
-  }
-  
-  .demo-button {
-    margin-top: 15px;
-  }
-  
-  .explore-button {
-    margin-top: 25px;
   }
 }

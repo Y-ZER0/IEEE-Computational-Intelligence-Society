@@ -1,0 +1,57 @@
+.all-events-page {
+  position: relative;
+  top: 75px;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 0 30px;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+.all-events-page {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.all-events-page .timeline {
+  margin-top: 60px;
+}
+
+.all-events-page .events-workshops {
+  padding-bottom: 40px;
+}

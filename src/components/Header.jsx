@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../ComponentsStyling/Header.css';
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ const Logo = ({ isDarkMode }) => {
   const handleLogoClick = (e) => {
     e.preventDefault(); 
     navigate('/');
-    window.location.href = window.location.origin + window.location.pathname.split('#')[0];
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -28,6 +28,7 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleDropdownToggle = (e) => {
     e.preventDefault();
@@ -39,15 +40,25 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
     setIsMobileMenuOpen(false);
     setIsAboutDropdownOpen(false);
     
-    if (onNavigation && currentPage !== 'home') {
-      onNavigation(sectionId);
-    } else {
-      if (sectionId === '#') {
+    // Check if we're on the homepage
+    const isHomePage = location.pathname === '/';
+    
+    // Handle different navigation scenarios
+    if (sectionId === '#') {
+      if (isHomePage) {
+        // Scroll to top if already on homepage
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      } else if (sectionId.startsWith('#')) {
+      } else {
+        // Navigate to homepage and scroll to top
+        navigate('/');
+        window.scrollTo(0, 0);
+      }
+    } else if (sectionId.startsWith('#')) {
+      if (isHomePage) {
+        // Handle section scrolling when on homepage
         const element = document.getElementById(sectionId.substring(1));
         if (element) {
           const headerHeight = document.querySelector('.main-header')?.offsetHeight || 100;
@@ -59,8 +70,25 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
           });
         }
       } else {
-        navigate(sectionId);
+        // Navigate to homepage first, then scroll to section
+        navigate('/');
+        // Need to wait for the component to mount
+        setTimeout(() => {
+          const element = document.getElementById(sectionId.substring(1));
+          if (element) {
+            const headerHeight = document.querySelector('.main-header')?.offsetHeight || 100;
+            const topOffset = element.offsetTop - headerHeight;
+            
+            window.scrollTo({
+              top: topOffset,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
       }
+    } else {
+      // Handle regular path navigation
+      navigate(sectionId);
     }
   };
 
@@ -108,6 +136,10 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
           setIsMobileMenuOpen(false);
           setIsAboutDropdownOpen(false);
         }}>FAQ</Link></li>
+        <li><Link to="/all-events" onClick={() => {
+          setIsMobileMenuOpen(false);
+          setIsAboutDropdownOpen(false);
+        }}>All Events</Link></li>
       </ul>
     </nav>
   );

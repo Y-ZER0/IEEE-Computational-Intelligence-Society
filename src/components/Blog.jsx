@@ -75,13 +75,7 @@ const Blog = ({ isDarkMode }) => {
       id="blog"
     >
       <div className="news-slider-wrapper">
-        <h2 
-          className={`
-            text-4xl font-bold mb-12 text-center 
-            ai-insights-heading 
-            ${isDarkMode ? 'text-white' : 'text-black'}
-          `}
-        >
+        <h2 className="text-4xl font-bold mb-12 text-center ai-insights-heading">
           Latest AI Insights
         </h2>
         

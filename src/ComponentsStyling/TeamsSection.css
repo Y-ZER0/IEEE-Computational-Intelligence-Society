@@ -25,7 +25,7 @@
     margin-bottom: 3rem;
     background: var(--dark-gradient);
     -webkit-background-clip: text;
-    color: transparent;
+    color: #FAFAFC;
 }
 
 .teams-grid {
@@ -78,7 +78,6 @@
     opacity: 0.7;
 }
 
-/* New styles for multiple leaders */
 .team-leaders-grid {
     display: grid;
     gap: 1rem;
@@ -94,6 +93,8 @@
     .team-leaders-grid.multiple-leaders {
         grid-template-columns: 1fr;
     }
+
+   
 }
 
 .team-leader-image-container {

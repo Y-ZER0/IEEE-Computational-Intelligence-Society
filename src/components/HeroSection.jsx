@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from './Header';
-// import HeroContent from './HeroContent';
 
-function HeroSection({onToggleTheme, isDarkMode}) {
+function HeroSection({onToggleTheme, isDarkMode, minimal = false, currentPage = "home"}) {
   return (
-    <section className="hero" id="home">
-      <Header onToggleTheme={onToggleTheme} isDarkMode={isDarkMode} currentPage="home" />
-      {/* <HeroContent /> */}
+    <section className={`hero ${minimal ? 'minimal' : ''}`} id={currentPage === "home" ? "home" : ""}>
+      <Header onToggleTheme={onToggleTheme} isDarkMode={isDarkMode} currentPage={currentPage} />
     </section>
   );
 }
