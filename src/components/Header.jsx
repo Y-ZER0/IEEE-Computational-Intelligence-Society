@@ -40,25 +40,20 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
     setIsMobileMenuOpen(false);
     setIsAboutDropdownOpen(false);
     
-    // Check if we're on the homepage
     const isHomePage = location.pathname === '/';
     
-    // Handle different navigation scenarios
     if (sectionId === '#') {
       if (isHomePage) {
-        // Scroll to top if already on homepage
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
       } else {
-        // Navigate to homepage and scroll to top
         navigate('/');
         window.scrollTo(0, 0);
       }
     } else if (sectionId.startsWith('#')) {
       if (isHomePage) {
-        // Handle section scrolling when on homepage
         const element = document.getElementById(sectionId.substring(1));
         if (element) {
           const headerHeight = document.querySelector('.main-header')?.offsetHeight || 100;
@@ -70,9 +65,7 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
           });
         }
       } else {
-        // Navigate to homepage first, then scroll to section
         navigate('/');
-        // Need to wait for the component to mount
         setTimeout(() => {
           const element = document.getElementById(sectionId.substring(1));
           if (element) {
@@ -87,7 +80,6 @@ const NavigationMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, onNavigation, c
         }, 100);
       }
     } else {
-      // Handle regular path navigation
       navigate(sectionId);
     }
   };

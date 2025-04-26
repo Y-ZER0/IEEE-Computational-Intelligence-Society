@@ -85,7 +85,6 @@
     overflow: hidden;
     border-radius: 1rem;
     transition: all 0.3s ease;
-    /* Ensure proper height containment */
     display: flex;
     flex-direction: column;
 }
@@ -177,7 +176,6 @@
     flex-direction: column;
 }
 
-/* Light mode title */
 .light-mode .news-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -185,7 +183,6 @@
     color: #000000;
 }
 
-/* Dark mode title */
 .dark-mode .news-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -232,7 +229,6 @@
     border: none;
 }
 
-/* Light mode pagination */
 .light-mode .news-dot {
     background-color: var(--secondary-light-blue-gray);
 }
@@ -243,7 +239,6 @@
     border-radius: 1rem;
 }
 
-/* Dark mode pagination */
 .dark-mode .news-dot {
     background-color: rgba(255, 255, 255, 0.3);
 }
@@ -254,7 +249,6 @@
     border-radius: 1rem;
 }
 
-/* Improved Media Queries with smoother breakpoints */
 @media (min-width: 1400px) {
     .news-slider-wrapper {
         max-width: 1400px;

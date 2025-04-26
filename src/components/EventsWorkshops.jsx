@@ -9,7 +9,6 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   
-  // Only display the limited number of events on the homepage
   const displayedEvents = limit ? eventsData.slice(0, limit) : eventsData;
 
   useEffect(() => {
@@ -54,7 +53,6 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
   const handleExploreMoreClick = (e) => {
     e.preventDefault();
     navigate('/all-events');
-    // Ensure the page scrolls to the top when navigating
     window.scrollTo(0, 0);
   };
 

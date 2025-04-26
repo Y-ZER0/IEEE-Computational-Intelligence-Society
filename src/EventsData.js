@@ -1,7 +1,6 @@
-// Separate file for events data to improve modularity and maintainability
 export const eventsData = [
   {
-    id: 20,
+    id: 21,
     title: "IFTAR - COLLABORATION WITH IEEE CIS UJ AND IEEE CS UJ",
     date: "March 28, 2025",
     description: "Join us for a special Iftar gathering that brings together members of IEEE CIS UJ and IEEE CS UJ. This event combines networking, community building, and cultural celebration during the holy month of Ramadan.",
@@ -9,23 +8,23 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/IFTAR.PNG` 
   },
   {
-    id: 19,
+    id: 20,
     title: "AI in Cybersecurity - Collaboration between IEEE CIS and IEEE ESPRIT SBC",
     date: "March 8, 2025",
     description: "Explore the intersection of AI and cybersecurity in this collaborative workshop between IEEE CIS and IEEE ESPRIT SBC, covering AI-powered security solutions, real-time threat detection, and machine learning for malware analysis.",
     fullDescription: "This collaborative workshop between IEEE CIS and IEEE ESPRIT SBC explores the cutting-edge intersection of artificial intelligence and cybersecurity. Industry experts demonstrate how AI is transforming traditional security approaches through real-time threat detection, automated response systems, and predictive analytics. Participants will learn about deep learning applications for malware detection, network anomaly identification, and vulnerability assessment. The workshop includes hands-on demonstrations of AI-powered security tools, case studies of successful implementations, and discussions about ethical considerations in AI-driven security solutions. Perfect for cybersecurity professionals, AI enthusiasts, and students interested in the future of digital security.",
-    image: `${process.env.PUBLIC_URL}/images/AIinCyber.PNG` 
+    image: `${process.env.PUBLIC_URL}/images/AIinCyber.JPG` 
   },
   {
-    id: 18,
+    id: 19,
     title: "AI Developer Essentials Workshop",
     date: "February 11, 2025",
     description: "Master the fundamental skills every AI developer needs with our comprehensive workshop led by Ahmad Stryin, covering data science fundamentals, machine learning algorithms, deep learning frameworks, and practical implementation techniques.",
     fullDescription: "This intensive workshop led by industry expert Ahmad Stryin provides a comprehensive introduction to the essential skills every AI developer needs in today's competitive landscape. Participants will explore data science fundamentals, including data preprocessing, visualization, and statistical analysis. The workshop covers key machine learning algorithms, model evaluation techniques, and best practices for dataset preparation. Dive into deep learning with hands-on experience using popular frameworks, and learn practical implementation strategies for real-world AI applications. Through interactive coding sessions and practical exercises, attendees will build confidence in developing AI solutions that address actual business challenges. Suitable for both beginners and those looking to strengthen their AI development foundation.",
-    image: `${process.env.PUBLIC_URL}/images/AIDEVELOPER.PNG` 
+    image: `${process.env.PUBLIC_URL}/images/AIDEVELOPER.JPG` 
   },
   {
-    id: 17,
+    id: 18,
     title: "Microcontrollers Unleashed Workshop",
     date: "January 4, 2025",
     description: "Get hands-on experience with popular microcontroller platforms including Arduino, ESP, and Raspberry Pi in this practical workshop exploring hardware programming, sensor integration, and IoT applications.",
@@ -33,23 +32,23 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/Micro.JPG` 
   },
   {
-    id: 16,
+    id: 17,
     title: "LinkedIn Mastery",
     date: "December 8, 2023",
     description: "Transform your professional online presence with LinkedIn expert Saleem Bustami, learning proven strategies for profile optimization, networking, content creation, and leveraging LinkedIn for career advancement.",
     fullDescription: "In this transformative workshop led by LinkedIn strategist Saleem Bustami, participants will learn how to maximize LinkedIn's potential as a career development platform. The session covers comprehensive profile optimization techniques that increase visibility to recruiters and industry peers, strategic networking approaches to connect with decision-makers, and content creation strategies that establish thought leadership. Attendees will discover how to leverage LinkedIn's algorithm, participate effectively in industry conversations, and use the platform's advanced features for job searching and professional growth. The workshop includes practical exercises, profile reviews, and personalized recommendations to help participants implement what they've learned immediately.",
-    image: `${process.env.PUBLIC_URL}/images/LinkInMaster.PNG` 
+    image: `${process.env.PUBLIC_URL}/images/LinkInMaster.JPG` 
   },
   {
-    id: 15,
+    id: 16,
     title: "IEEE CIS AT UJ Hackathon",
     date: "November 23, 2024",
     description: "Celebrating our achievement of securing third place in both the Generative AI and Gaming Development tracks at the prestigious UJ Hackathon, showcasing innovative solutions and technical excellence.",
     fullDescription: "We're proud to announce that IEEE CIS members secured third place in both the Generative AI and Gaming Development tracks at the prestigious UJ Hackathon. Our teams demonstrated exceptional creativity, technical acumen, and collaborative problem-solving skills throughout the intensive competition. In the Generative AI track, our solution leveraged cutting-edge models to create innovative applications that impressed the judges with their practicality and technical implementation. Meanwhile, our Gaming Development team showcased impressive game mechanics, engaging user experiences, and polished execution. This dual achievement highlights our branch's versatility across different domains of computational intelligence and reinforces our commitment to fostering technical excellence among our members.",
-    image: `${process.env.PUBLIC_URL}/images/UJHACK.PNG` 
+    image: `${process.env.PUBLIC_URL}/images/UJHACK.JPG` 
   },
   {
-    id: 14,
+    id: 15,
     title: "Building a successful career in AI Workshop",
     date: "November 14, 2024",
     description: "Prepare for the competitive AI job market with insider strategies for acing technical interviews, building an impressive portfolio, and positioning yourself as a standout candidate in artificial intelligence roles.",
@@ -57,7 +56,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/SuccCareerAI.JPG` 
   },
   {
-    id: 13,
+    id: 14,
     title: "AI in Astronomy Event",
     date: "December 28, 2023",
     description: "Explore the revolutionary application of AI in analyzing deep space objects, from automated celestial body classification to processing massive astronomical datasets for scientific discovery.",
@@ -65,7 +64,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/AIASTRO.JPG` 
   },
   {
-    id: 12,
+    id: 13,
     title: "Introductory Event on AI",
     date: "October 27, 2023",
     description: "Begin your AI journey with this accessible introduction to artificial intelligence concepts, current applications across industries, and exciting developments shaping the future of technology.",
@@ -73,7 +72,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/Intro.JPG` 
   },
   {
-    id: 11,
+    id: 12,
     title: "Arduino Course",
     date: "July 15, 2023",
     description: "Learn Arduino programming and hardware interfacing from mechatronics engineer Muhammad Samara in this comprehensive course featuring hands-on projects, circuit design, and practical IoT applications.",
@@ -81,7 +80,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/Arduino.JPG` 
   },
   {
-    id: 10,
+    id: 11,
     title: "AI & MATLAB Summary",
     date: "June 24, 2023",  
     description: "Discover MATLAB's powerful capabilities for machine learning and deep learning applications with guidance from a Technical Manager at MathWorks, exploring practical implementation techniques and industry best practices.",
@@ -89,7 +88,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/AIAndMatlab.JPG` 
   },
   {
-    id: 9,
+    id: 10,
     title: "Responsive AI",
     date: "May 31, 2023",
     description: "Join industry expert Baha Rabbah for an important discussion on responsible AI development, exploring ethical considerations, best practices, and collaborative approaches to ensuring AI systems benefit humanity.",
@@ -97,7 +96,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/ResponsibleAI.JPG` 
   },
   {
-    id: 8,
+    id: 9,
     title: "Python Course",
     date: "May 20, 2023",
     description: "Build a solid foundation in Python programming with this beginner-friendly course covering essential concepts like operators, conditional statements, loops, and object-oriented programming principles.",
@@ -105,7 +104,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/PythonCourse.JPG` 
   },
   {
-    id: 7,
+    id: 8,
     title: "Skill Spark CV",
     date: "May 16, 2023",
     description: "Transform your resume with resume writing expert Sundos Alshoubaki, learning proven techniques for highlighting your skills, experiences, and achievements to capture employers' attention.",
@@ -113,7 +112,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/SkillSparkCV.JPG` 
   },
   {
-    id: 6,
+    id: 7,
     title: "Data Preparation Course",
     date: "May 10, 2023",
     description: "Master essential data preparation techniques with Basel Husam, learning professional approaches to data analysis, cleaning, and preprocessing that form the foundation of successful data science projects.",
@@ -121,7 +120,7 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/DataPreparation.JPG` 
   },
   {
-    id: 5,
+    id: 6,
     title: "Skill Spark Creative Thinking",
     date: "April 9, 2023",
     description: "Enhance your problem-solving abilities with creative thinking expert Subhi Abdalla, exploring innovative approaches to critical thinking, ideation, and tackling complex challenges across various domains.",
@@ -129,12 +128,20 @@ export const eventsData = [
     image: `${process.env.PUBLIC_URL}/images/SkillSparkCreativeThinking.JPG` 
   },
   {
-    id: 4,
+    id: 5,
     title: "Skill Spark LinkedIn",
     date: "January 12, 2023",
     description: "Optimize your LinkedIn presence with social media strategist Abdel Rahman AlSabbagh, learning insider tips for profile optimization, professional networking, and leveraging LinkedIn for career advancement.",
     fullDescription: "This Skill Spark workshop led by LinkedIn expert Abdel Rahman AlSabbagh provides comprehensive guidance on maximizing LinkedIn's potential for professional development. Participants will learn step-by-step approaches to creating a compelling LinkedIn profile that attracts recruiters and industry connections. The session covers strategic networking techniques, effective content engagement, and visibility optimization within LinkedIn's algorithm. Attendees will discover how to leverage LinkedIn's various features for job searching, business development, and thought leadership. The workshop includes practical advice on crafting engaging posts, building a professional brand, and using LinkedIn analytics to refine your strategy. Whether you're a student, job seeker, or established professional, this workshop offers valuable insights to enhance your digital professional presence.",
     image: `${process.env.PUBLIC_URL}/images/SkillSpark.JPG` 
+  },
+  {
+    id: 4,
+    title: "Seminar: Data Science Applied to Marketing",
+    date: "January 6, 2023",
+    description: "Discover how data science transforms modern marketing strategies with our comprehensive seminar led by industry experts. Learn practical techniques for leveraging data analytics, machine learning, and predictive modeling to optimize customer targeting, personalization, and campaign performance measurement.",
+    fullDescription: "This intensive seminar explores the revolutionary intersection of data science and marketing in today's digital landscape. Participants will gain hands-on experience with cutting-edge analytical tools and methodologies that drive data-informed marketing decisions. The program covers essential topics including customer segmentation using clustering algorithms, predictive analytics for consumer behavior forecasting, and implementing A/B testing frameworks for campaign optimization. Our expert instructors will demonstrate how to extract actionable insights from marketing datasets, build effective recommendation systems, and develop attribution models that accurately measure multichannel campaign effectiveness. The seminar includes practical workshops on data visualization techniques that communicate marketing insights to stakeholders, ethical considerations in data collection and usage, and implementing machine learning models for personalized marketing automation. Whether you're a marketing professional looking to enhance your analytical capabilities or a data scientist interested in marketing applications, this seminar provides valuable frameworks for integrating data science into marketing strategy. Participants will leave with practical skills to implement data-driven approaches that enhance customer experience, optimize marketing ROI, and create competitive advantage through intelligent data utilization.",
+    image: `${process.env.PUBLIC_URL}/images/Seminar Data Science Applied to Marketing.JPG`
   },
   {
     id: 3,

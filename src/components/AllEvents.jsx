@@ -3,7 +3,6 @@ import EventsWorkshops from './EventsWorkshops';
 import '../ComponentsStyling/AllEvents.css';
 
 const AllEvents = () => {
-  // Use useEffect to scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

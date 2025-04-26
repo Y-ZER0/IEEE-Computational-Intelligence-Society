@@ -187,7 +187,6 @@
   color: white;
 }
 
-/* Modal Styles */
 .event-modal-overlay {
   position: fixed;
   top: 0;
@@ -495,7 +494,6 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Media query adjustments */
 @media screen and (max-width: 768px) {
   .explore-more-btn {
     padding: 10px 22px;
@@ -518,7 +516,6 @@
   }
 }
 
-/* Optional: Add styles for the minimal hero section if needed */
 .hero.minimal {
   height: auto;
   min-height: 80px;

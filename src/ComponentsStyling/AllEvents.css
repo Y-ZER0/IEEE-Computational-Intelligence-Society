@@ -3,6 +3,7 @@
   top: 75px;
   min-height: 100vh;
   padding-bottom: 60px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .page-header h1 {
@@ -18,23 +19,12 @@
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .page-header {
-    padding: 60px 0 30px;
-  }
-  
-  .page-header h1 {
-    font-size: 2rem;
-  }
-  
-  .page-header p {
-    font-size: 1rem;
-    padding: 0 20px;
-  }
+.all-events-page .timeline {
+  margin-top: 60px;
 }
 
-.all-events-page {
-  animation: fadeIn 0.5s ease-in-out;
+.all-events-page .events-workshops {
+  padding-bottom: 40px;
 }
 
 @keyframes fadeIn {
@@ -48,10 +38,99 @@
   }
 }
 
-.all-events-page .timeline {
-  margin-top: 60px;
+@media (max-width: 1024px) {
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .all-events-page .timeline {
+    margin-top: 50px;
+  }
 }
 
-.all-events-page .events-workshops {
-  padding-bottom: 40px;
+@media (max-width: 768px) {
+  .all-events-page {
+    top: -5px;
+    padding-bottom: 50px;
+  }
+  
+  .page-header {
+    padding: 60px 0 30px;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .all-events-page .timeline {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .all-events-page {
+    top: 15px;
+    padding-bottom: 40px;
+  }
+  
+  .page-header {
+    padding: 45px 0 25px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .page-header p {
+    font-size: 0.95rem;
+    padding: 0 15px;
+    max-width: 95%;
+  }
+  
+  .all-events-page .timeline {
+    margin-top: 30px;
+  }
+  
+  .all-events-page .events-workshops {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .all-events-page {
+    top: -70px;
+  }
+  
+  .page-header {
+    padding: 40px 0 20px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .page-header p {
+    font-size: 0.9rem;
+  }
+  
+  .all-events-page .timeline {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .page-header p {
+    font-size: 0.85rem;
+  }
 }

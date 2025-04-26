@@ -5,21 +5,21 @@ const WebMasters = () => {
   const webTeam = [
     {
       name: "Yousef Abu-Nimreh",
-      role: "Frontend & Aspiring Software Developer",
-      contribution: "React components development and styling", 
-      image:  `${process.env.PUBLIC_URL}/images/Yousef Abu-Nimreh.jpeg`
+      role: "Frontend Developer",
+      contribution: "Built the website structure and developed React components",
+      image: `${process.env.PUBLIC_URL}/images/Yousef Abu-Nimreh.jpeg`
     },
     {
       name: "Khaled Raed",
-      role: "Frontend & Aspiring Software Developer",
-      contribution: "UI/UX implementation and design",
-      image:  `${process.env.PUBLIC_URL}/images/Khaled.jpeg`
+      role: "Project Lead",
+      contribution: "Managed the team and designed the user interface",
+      image: `${process.env.PUBLIC_URL}/images/Khaled.jpeg`
     },
     {
       name: "Hussam Tarteer",
-      role: "Frontend & Aspiring Software Developer",
-      contribution: "UI/UX implementation and design",
-      image:  `${process.env.PUBLIC_URL}/images/Hussam.jpg` 
+      role: "Technical Support",
+      contribution: "Provided domain services and backend assistance",
+      image: `${process.env.PUBLIC_URL}/images/Hussam.jpg`
     }
   ];
 

@@ -14,16 +14,13 @@
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-/* Add these styles to your App.css file */
 
-/* Fix for white space at 768px breakpoint */
 html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Ensure all containers respect parent width */
 #root, .App, .light-mode, .dark-mode {
   width: 100%;
   max-width: 100%;
@@ -31,9 +28,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Media query for the specific breakpoint causing issues */
 @media screen and (max-width: 768px) {
-  /* Reset any potential margins or paddings that might be causing the issue */
   body, #root, .App, .light-mode, .dark-mode {
     margin: 0;
     padding: 0;
@@ -41,7 +36,6 @@ html, body {
     max-width: 100%;
   }
   
-  /* Ensure all section containers are properly contained */
   section, div[class*="container"], div[class*="section"] {
     width: 100%;
     max-width: 100%;

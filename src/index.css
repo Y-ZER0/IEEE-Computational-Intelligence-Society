@@ -53,7 +53,6 @@ a, button, [role="button"], input[type="submit"] {
   cursor: url('../public/images/robot-hand-cursor.svg') 11 2, pointer;
 }
 
-/* Animation Classes */
 .animate-section {
   opacity: 0;
   transition: opacity 0.5s ease;

@@ -121,7 +121,7 @@
   will-change: transform, box-shadow;
   display: flex;
   flex-direction: column;
-  min-height: 180px; /* Ensure consistent minimum height */
+  min-height: 180px; 
 }
 
 .animated-element.animate-in .highlight-item {

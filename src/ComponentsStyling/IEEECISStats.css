@@ -53,7 +53,6 @@
   gap: 2rem;
 }
 
-/* Light mode stat card */
 .light-mode .ieee-cis-stats .stat-card {
   padding: 2rem;
   border-radius: 12px;
@@ -77,7 +76,6 @@
   color: #ffffff;
 }
 
-/* Dark mode stat card - keeping same background but changing text to modern black */
 .dark-mode .ieee-cis-stats .stat-card {
   padding: 2rem;
   border-radius: 12px;
@@ -86,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque in dark mode */
+  background-color: rgba(255, 255, 255, 0.15); 
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   opacity: 0;
@@ -98,7 +96,7 @@
   position: relative;
   z-index: 1;
   will-change: transform, box-shadow;
-  color: #212121; /* Modern black color for text in dark mode */
+  color: #212121;
 }
 
 .ieee-cis-stats.is-visible .stat-card:nth-child(1) {
@@ -122,15 +120,13 @@
   transform: translateY(0);
 }
 
-/* Separate hover transitions with no delay */
 .ieee-cis-stats.is-visible .stat-card,
 .ieee-cis-stats.is-visible .stat-card > *,
 .ieee-cis-stats.is-visible .stat-card::after {
-  /* Apply hover transitions without affecting the initial appearance */
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
               opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition-delay: 0s; /* No delay for hover effects */
+  transition-delay: 0s; 
 }
 
 .ieee-cis-stats.is-visible .stat-card:hover {
@@ -187,7 +183,7 @@
   border-radius: 50%;
   margin-bottom: 1.5rem;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #1a1a1a; /* Dark icon color to match text */
+  color: #1a1a1a; 
   position: relative;
   left: 10px;
 }

@@ -14,7 +14,7 @@ import EventsWorkshops from './components/EventsWorkshops';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import FAQ from "./components/FAQ";
-import AllEvents from './components/AllEvents'; // Import the new AllEvents component
+import AllEvents from './components/AllEvents'; 
  
 function App() {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -23,7 +23,6 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  // Main home page layout
   const HomePage = () => (
     <>
       <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode} currentPage="home" />
@@ -34,14 +33,13 @@ function App() {
       <LeadershipSection /> 
       <TeamsSection/>
       <StarsOfMonth isDarkMode={isDarkMode} /> 
-      <EventsWorkshops limit={6} showExploreMore={true} /> {/* Limit to 6 events */}
+      <EventsWorkshops limit={6} showExploreMore={true} /> 
       <Blog/>
       <WebMasters/> 
       <Footer isDarkMode={isDarkMode} />
     </>
   );
 
-  // All events page layout
   const EventsPage = () => (
     <>
       <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode} minimal={true} currentPage="events" />
