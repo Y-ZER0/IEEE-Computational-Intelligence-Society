@@ -59,7 +59,15 @@ const LeadershipSection = () => {
             bio: "Financial expert managing the society's resources with precision and transparency to support our technical and educational initiatives.",
             linkedin: "https://www.linkedin.com/in/qusai-abu-ghannam-aba05b296?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnakFUq%2BkSQycRqBSG9fbkw%3D%3D",
             email: "qusaiabughannam44@gmail.com"
-        }
+        },
+        {
+            name: "Khaled Raed",
+            title: "Web Master, IEEE CIS Society",
+            image: `${process.env.PUBLIC_URL}/images/Khaled.jpeg`,
+            bio: "Skilled web developer leading the design and development of the IEEE CIS Society website. Optimized site functionality and user experience to effectively showcase events, programs, and research initiatives.",
+            linkedin: "https://www.linkedin.com/in/khaled-al-khateeb-0a92412a7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIv4Lt2HETyW0TCV7UWurzA%3D%3D",
+            email: "khaledraedkhateeb@gmail.com"
+        },
     ];
 
     return (

@@ -151,19 +151,33 @@
   
 .web-master-image-container {
   position: relative;
-  height: 350px;
+  height: 400px;
   overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
   
 .web-master-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  object-position: center center;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  display: block; /* Eliminates any inline spacing issues */
+}
+
+.web-master-card:first-child .web-master-image {
+  object-position: center 25%; 
+}
+
+.web-master-card:nth-child(2) .web-master-image {
+  object-position: center 30%; 
 }
   
 .web-master-card:hover .web-master-image {
-  transform: scale(1.1);
+  transform: scale(1.08);
+  filter: brightness(1.05);
 }
   
 .dark-mode .web-master-overlay {
@@ -253,7 +267,7 @@
   }
   
   .web-master-image-container {
-    height: 200px;
+    height: 350px;
   }
 }
   
@@ -264,6 +278,10 @@
   
   .web-masters-grid {
     grid-template-columns: 1fr;
+  }
+
+  .web-master-image-container {
+    height: 300px;
   }
 }
 

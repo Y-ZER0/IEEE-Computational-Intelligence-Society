@@ -84,6 +84,10 @@
     transition: transform 0.3s ease;
 }
 
+.leadership-card:nth-child(5) .leader-image {
+    object-position: center 70%;
+}
+
 .leadership-card:hover .leader-image {
     transform: scale(1.1);
 }

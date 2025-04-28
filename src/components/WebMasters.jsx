@@ -10,12 +10,6 @@ const WebMasters = () => {
       image: `${process.env.PUBLIC_URL}/images/Yousef Abu-Nimreh.jpeg`
     },
     {
-      name: "Khaled Raed",
-      role: "Project Lead",
-      contribution: "Managed the team and designed the user interface",
-      image: `${process.env.PUBLIC_URL}/images/Khaled.jpeg`
-    },
-    {
       name: "Hussam Tarteer",
       role: "Technical Support",
       contribution: "Provided domain services and backend assistance",
@@ -62,7 +56,7 @@ const WebMasters = () => {
     <section className="web-masters-section" id="web-masters">
       <div className="web-masters-container">
         <div className="web-masters-header">
-          <h2>Web Masters</h2>
+          <h2>Web Master Team</h2>
           <p>The talented team behind this website</p>
           <div className="web-masters-underline"></div>
         </div>
