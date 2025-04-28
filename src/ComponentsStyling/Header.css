@@ -26,6 +26,8 @@
   flex: 9;
   display: flex;
   justify-content: center;
+  position: relative;
+  right: 55px;
 }
 
 .logo-image {
@@ -227,6 +229,88 @@ section.hero {
   }
 }
 
+@media screen and (max-width: 888px) {
+  .main-header {
+    height: 90px;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  
+  .header-nav {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background: var(--light-gradient);
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+  }
+  
+  .dark-mode .header-nav {
+    background: linear-gradient(120deg, #0d0d0d 0%, #2c3e50 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header-nav.mobile-menu-open {
+    height: auto;
+    padding: 1rem 0;
+    visibility: visible;
+  }
+  
+  .horizontal-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0;
+    animation: none;
+    transform: none;
+    opacity: 1;
+    margin-top: 0.5rem;
+  }
+  
+  .dark-mode .dropdown-menu {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+  
+  .dropdown-menu li a {
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .header-toggle {
+    margin-left: 1rem;
+  }
+  
+  .logo-image {
+    max-height: 120px;
+  }
+  
+  section.hero {
+    padding-top: 100px;
+  }
+
+  .about-us-section {
+    padding-top: 100px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .main-header {
     height: 90px;
@@ -305,12 +389,13 @@ section.hero {
   }
 
   .about-us-section {
-    padding-top: 100px; 
+    padding-top: 100px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .main-header {
-    height: 80px; 
+    height: 80px;
   }
   
   .header-nav {
@@ -322,10 +407,10 @@ section.hero {
   }
   
   section.hero {
-    padding-top: 90px; 
+    padding-top: 90px;
   }
 
   .about-us-section {
     padding-top: 90px;
   }
-}}
+}
