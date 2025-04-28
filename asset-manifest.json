@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/IEEE-Computational-Intelligence-Society/static/css/main.e218aee7.css",
-    "main.js": "/IEEE-Computational-Intelligence-Society/static/js/main.05fa3204.js",
-    "static/js/453.ed3810f9.chunk.js": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js",
-    "static/media/robot-hand-cursor.svg": "/IEEE-Computational-Intelligence-Society/static/media/robot-hand-cursor.bcec163182d4f149d92d.svg",
-    "index.html": "/IEEE-Computational-Intelligence-Society/index.html",
-    "main.e218aee7.css.map": "/IEEE-Computational-Intelligence-Society/static/css/main.e218aee7.css.map",
-    "main.05fa3204.js.map": "/IEEE-Computational-Intelligence-Society/static/js/main.05fa3204.js.map",
-    "453.ed3810f9.chunk.js.map": "/IEEE-Computational-Intelligence-Society/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "./static/css/main.bdcbfb11.css",
+    "main.js": "./static/js/main.c6c6c451.js",
+    "static/js/453.ed3810f9.chunk.js": "./static/js/453.ed3810f9.chunk.js",
+    "static/media/robot-hand-cursor.svg": "./static/media/robot-hand-cursor.bcec163182d4f149d92d.svg",
+    "index.html": "./index.html",
+    "main.bdcbfb11.css.map": "./static/css/main.bdcbfb11.css.map",
+    "main.c6c6c451.js.map": "./static/js/main.c6c6c451.js.map",
+    "453.ed3810f9.chunk.js.map": "./static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e218aee7.css",
-    "static/js/main.05fa3204.js"
+    "static/css/main.bdcbfb11.css",
+    "static/js/main.c6c6c451.js"
   ]
 }
