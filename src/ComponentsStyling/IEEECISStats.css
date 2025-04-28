@@ -237,9 +237,11 @@
 }
 
 @media (max-width: 575px) {
-  .ieee-cis-stats .icon-container {   
-     position: relative;
-     left: 0px;
+  .ieee-cis-stats .icon-container {
+    position: static; 
+    left: auto;
+    margin: 0 auto 1.5rem; 
+    transform: translateX(0); 
   }
 }
 
@@ -252,9 +254,15 @@
     font-size: 2rem;
   }
 
-  .ieee-cis-stats .icon-container {   
-    position: relative;
-    left: 0px;
+  .ieee-cis-stats .icon-container {
+    position: static;
+    left: auto;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .ieee-cis-stats .stat-card {
+    align-items: center;
+    justify-content: center;
   }
 }
 

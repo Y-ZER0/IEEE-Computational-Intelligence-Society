@@ -31,7 +31,7 @@ const IEEECISStats = ({ isDarkMode }) => {
     { 
       id: 1, 
       title: 'Team Members', 
-      value: '125+', 
+      value: '85+', 
       icon: <FaUsers size={32} />, 
       description: 'Active professionals and students'
     },
@@ -45,7 +45,7 @@ const IEEECISStats = ({ isDarkMode }) => {
     { 
       id: 3, 
       title: 'Awards', 
-      value: '27', 
+      value: '1', 
       icon: <FaTrophy size={32} />, 
       description: 'Recognition for excellence'
     },

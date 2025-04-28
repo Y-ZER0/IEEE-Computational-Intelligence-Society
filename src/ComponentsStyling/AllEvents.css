@@ -1,6 +1,6 @@
 .all-events-page {
   position: relative;
-  top: 75px;
+  top: 60px;
   min-height: 100vh;
   padding-bottom: 60px;
   animation: fadeIn 0.5s ease-in-out;
@@ -102,6 +102,13 @@
   }
 }
 
+@media (max-width: 434px) and (min-width: 375px) {
+  .all-events-page {
+    top:-5px;
+  }
+}
+
+
 @media (max-width: 375px) {
   .all-events-page {
     top: -70px;
@@ -133,4 +140,11 @@
   .page-header p {
     font-size: 0.85rem;
   }
+}
+
+@media screen and (max-width: 282px) {
+  .all-events-page {
+    top: -90px;
+  }
+
 }

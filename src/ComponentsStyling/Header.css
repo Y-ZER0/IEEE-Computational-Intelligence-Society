@@ -23,7 +23,7 @@
 }
 
 .header-nav {
-  flex: 2;
+  flex: 9;
   display: flex;
   justify-content: center;
 }

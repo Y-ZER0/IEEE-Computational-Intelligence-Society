@@ -3,7 +3,8 @@
   position: relative;
   bottom: 145px;
   overflow: hidden;
-  background-color: #65d1ec;
+  background: linear-gradient(135deg, #0078a8, #2CABE2, #63d8ff);
+  color: #ffffff;
 }
 
 .dark-mode .events-workshops {
@@ -20,7 +21,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: var(--primary-white);
+  color: #ffffff; 
   font-weight: 700;
 }
 
@@ -32,7 +33,7 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto 60px;
-  color: var(--primary-white);
+  color: #ffffff; 
   font-size: 1.1rem;
 }
 
@@ -50,7 +51,7 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: var(--primary-white);
+  background-color: #ffffff; 
   top: 0;
   bottom: 0;
   left: 50%;
@@ -103,7 +104,8 @@
 
 .timeline-content {
   padding: 20px;
-  background: var(--light-card-bg);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -142,7 +144,7 @@
   display: inline-block;
   padding: 5px 10px;
   font-size: 0.9rem;
-  background-color: var(--primary-sky-blue);
+  background-color: rgba(255, 255, 255, 0.15); 
   color: white;
   border-radius: 20px;
   margin-bottom: 10px;
@@ -152,7 +154,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--secondary-black);
+  color: #ffffff; 
 }
 
 .dark-mode .event-title {
@@ -163,7 +165,8 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: var(--light-secondary-text);
+  color: #ffffff; 
+  opacity: 0.8;
 }
 
 .dark-mode .event-description {
@@ -172,8 +175,8 @@
 
 .learn-more-btn {
   background-color: transparent;
-  border: 2px solid var(--primary-sky-blue);
-  color: var(--primary-sky-blue);
+  border: 2px solid #ffffff; 
+  color: #ffffff; 
   padding: 8px 16px;
   font-size: 0.9rem;
   border-radius: 5px;
@@ -183,7 +186,7 @@
 }
 
 .learn-more-btn:hover {
-  background-color: var(--primary-sky-blue);
+  background-color: rgba(255, 255, 255, 0.15); 
   color: white;
 }
 
@@ -203,7 +206,8 @@
 }
 
 .event-modal-content {
-  background-color: var(--light-card-bg);
+  background: linear-gradient(135deg, #0078a8, #2CABE2, #63d8ff);
+  color: #ffffff;
   border-radius: 12px;
   max-width: 800px;
   width: 95%;
@@ -234,7 +238,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 25px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .dark-mode .modal-header {
@@ -244,7 +248,7 @@
 .modal-header h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--secondary-black);
+  color: #ffffff; 
   margin: 0;
 }
 
@@ -257,12 +261,12 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #888;
+  color: #ffffff; 
   transition: color 0.2s ease;
 }
 
 .close-modal-btn:hover {
-  color: var(--primary-sky-blue);
+  color: rgba(255, 255, 255, 0.7); 
 }
 
 .modal-image {
@@ -281,7 +285,7 @@
   display: inline-block;
   padding: 6px 12px;
   font-size: 0.95rem;
-  background-color: var(--primary-sky-blue);
+  background-color: rgba(255, 255, 255, 0.15); 
   color: white;
   border-radius: 20px;
   margin: 20px 25px 10px;
@@ -289,7 +293,8 @@
 
 .modal-description {
   padding: 0 25px 25px;
-  color: var(--light-secondary-text);
+  color: #ffffff; 
+  opacity: 0.8;
   line-height: 1.8;
 }
 
@@ -450,7 +455,7 @@
 
 .learn-more-btn:focus,
 .close-modal-btn:focus {
-  outline: 2px solid var(--primary-sky-blue);
+  outline: 2px solid rgba(255, 255, 255, 0.5); 
   outline-offset: 2px;
 }
 
@@ -467,7 +472,7 @@
 
 .explore-more-btn {
   display: inline-block;
-  background-color: var(--primary-sky-blue);
+  background-color: rgba(255, 255, 255, 0.15);
   color: white;
   padding: 12px 28px;
   font-size: 1.1rem;
@@ -475,13 +480,13 @@
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid var(--primary-sky-blue);
+  border: 2px solid #ffffff; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .explore-more-btn:hover {
   background-color: transparent;
-  color: var(--primary-sky-blue);
+  color: #ffffff; 
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
@@ -520,3 +525,4 @@
   height: auto;
   min-height: 80px;
 }
+
