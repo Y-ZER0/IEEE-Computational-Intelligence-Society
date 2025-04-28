@@ -69,7 +69,7 @@ export const eventsData = [
     date: "October 27, 2023",
     description: "Begin your AI journey with this accessible introduction to artificial intelligence concepts, current applications across industries, and exciting developments shaping the future of technology.",
     fullDescription: "This beginner-friendly introductory event provides a comprehensive overview of artificial intelligence and its growing impact across various fields. Participants will learn fundamental AI concepts explained in accessible terms, including machine learning, neural networks, and natural language processing. The presentation showcases real-world AI applications transforming industries like healthcare, finance, transportation, and entertainment. Attendees will gain insight into the current state of AI technology, major recent breakthroughs, and emerging trends that will shape the future technological landscape. The event includes interactive demonstrations, Q&A sessions with AI practitioners, and guidance on resources for those interested in further exploring the field of artificial intelligence.",
-    image: `${process.env.PUBLIC_URL}/images/Intro.jpg` 
+    image: `${process.env.PUBLIC_URL}/images/Intro.JPG` 
   },
   {
     id: 12,
