@@ -3,18 +3,24 @@ import '../ComponentsStyling/WebMasters.css';
 
 const WebMasters = () => {
   const webTeam = [
-    {
-      name: "Yousef Abu-Nimreh",
-      role: "Frontend Developer",
-      contribution: "Built the website structure and developed React components",
-      image: `${process.env.PUBLIC_URL}/images/Yousef Abu-Nimreh.jpeg`
-    },
-    {
-      name: "Hussam Tarteer",
-      role: "Technical Support",
-      contribution: "Provided domain services and backend assistance",
-      image: `${process.env.PUBLIC_URL}/images/Hussam.jpg`
-    }
+      {
+        name: "Yousef Abu-Nimreh",
+        role: "Frontend Developer",
+        contribution: "Built the website structure and developed React components",
+        image: `${process.env.PUBLIC_URL}/images/Yousef Abu-Nimreh.jpeg`
+      },
+      {
+        name: "Khaled Raed",
+        role: "Project Lead",
+        contribution: "Managed the team and designed the user interface",
+        image: `${process.env.PUBLIC_URL}/images/Khaled.jpeg`
+      },
+      {
+        name: "Hussam Tarteer",
+        role: "Technical Support",
+        contribution: "Provided domain services and backend assistance",
+        image: `${process.env.PUBLIC_URL}/images/Hussam.jpg`
+      }
   ];
 
   const cardsRef = useRef([]);

@@ -13,7 +13,7 @@
   background: var(--about-us-light-bg);
   transition: all 0.3s ease;
   position: relative;
-  bottom: 15px;
+  bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   max-width: 100vw;

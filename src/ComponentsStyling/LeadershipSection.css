@@ -24,6 +24,33 @@
     animation-delay: 0.2s;
 }
 
+/* Advisor container - centered */
+.advisor-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.advisor-card {
+    width: 100%;
+    max-width: 500px;
+    animation-delay: 0.2s !important;
+}
+
+/* Webmaster container - centered */
+.webmaster-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.webmaster-card {
+    width: 100%;
+    max-width: 500px;
+    animation-delay: 1.1s !important;
+}
+
+/* Middle leadership grid - 2x2 */
 .leadership-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -33,6 +60,37 @@
 @media (max-width: 768px) {
     .leadership-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .advisor-card,
+    .webmaster-card {
+        max-width: 100%;
+    }
+    
+    .leader-image-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .leader-image-container {
+        height: 300px;
+    }
+    
+    .leadership-title {
+        font-size: 2rem;
+    }
+    
+    .leader-bio {
+        font-size: 0.9rem;
+    }
+    
+    .leader-name {
+        font-size: 1.2rem;
+    }
+    
+    .leader-title {
+        font-size: 0.9rem;
     }
 }
 
@@ -49,20 +107,20 @@
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.leadership-card:nth-child(1) {
-    animation-delay: 0.3s;
+.leadership-grid .leadership-card:nth-child(1) {
+    animation-delay: 0.4s;
 }
 
-.leadership-card:nth-child(2) {
-    animation-delay: 0.5s;
+.leadership-grid .leadership-card:nth-child(2) {
+    animation-delay: 0.6s;
 }
 
-.leadership-card:nth-child(3) {
-    animation-delay: 0.7s;
+.leadership-grid .leadership-card:nth-child(3) {
+    animation-delay: 0.8s;
 }
 
-.leadership-card:nth-child(4) {
-    animation-delay: 0.9s;
+.leadership-grid .leadership-card:nth-child(4) {
+    animation-delay: 1.0s;
 }
 
 .leadership-card:hover {
@@ -84,8 +142,17 @@
     transition: transform 0.3s ease;
 }
 
-.leadership-card:nth-child(5) .leader-image {
-    object-position: center 70%;
+/* Specific image position adjustments */
+.leadership-grid .leadership-card:nth-child(2) .leader-image {
+    object-position: center 20%;
+}
+
+.leadership-grid .leadership-card:nth-child(4) .leader-image {
+    object-position: center 50%;
+}
+
+.webmaster-container .leader-image {
+    object-position: center 50%;
 }
 
 .leadership-card:hover .leader-image {
