@@ -1,10 +1,13 @@
 .all-events-page {
   position: relative;
-  top: 20px;
   padding-top: 50px;
   min-height: 100vh;
   padding-bottom: 60px;
   animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .page-header h1 {
@@ -39,11 +42,20 @@
   }
 }
 
+/* Large screens */
+@media (min-width: 1025px) {
+  .all-events-page {
+    top: 20px;
+  }
+}
+
+/* Medium-large screens */
 @media (max-width: 1024px) {
   .all-events-page {
     padding-top: 70px;
-    top:0px;
+    top: 0;
   }
+  
   .page-header h1 {
     font-size: 2.2rem;
   }
@@ -53,9 +65,11 @@
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   .all-events-page {
-    top: -35px;
+    padding-top: 35px;
+    top: 0;
     padding-bottom: 50px;
   }
   
@@ -77,9 +91,11 @@
   }
 }
 
+/* Large mobile */
 @media (max-width: 576px) {
   .all-events-page {
-    top: -15px;
+    padding-top: 45px;
+    top: 0;
     padding-bottom: 40px;
   }
   
@@ -107,20 +123,23 @@
   }
 }
 
-@media (max-width: 434px) and (min-width: 375px) {
+/* Medium mobile - fixing the 480px range specifically */
+@media (max-width: 480px) {
   .all-events-page {
-    top: 50px;
-  }
-}
-
-
-@media (max-width: 375px) {
-  .all-events-page {
-    top: -5px;
+    padding-top: 35px;
+    top: 0;
   }
   
   .page-header {
     padding: 40px 0 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  .all-events-page {
+    padding-top: 0px;
+    top: -45px;
   }
   
   .page-header h1 {
@@ -137,7 +156,12 @@
   }
 }
 
+/* Extra small mobile */
 @media (max-width: 320px) {
+  .all-events-page {
+    padding-top: 5px;
+  }
+  
   .page-header h1 {
     font-size: 1.4rem;
   }
@@ -147,9 +171,9 @@
   }
 }
 
+/* Extremely small screens */
 @media screen and (max-width: 282px) {
   .all-events-page {
-    top: -90px;
+    padding-top: 0px;
   }
-
 }
