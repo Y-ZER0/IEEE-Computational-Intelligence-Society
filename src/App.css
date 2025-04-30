@@ -14,7 +14,6 @@
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-
 html, body {
   width: 100%;
   max-width: 100%;
@@ -26,6 +25,22 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+/* Page spacer for pages without hero section */
+.page-spacer {
+  height: 80px; /* Adjust based on your header height */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* All Events page styling */
+.all-events-page {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -41,5 +56,9 @@ html, body {
     max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+  }
+  
+  .page-spacer {
+    height: 60px; /* Slightly smaller on mobile */
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HeroSection from './components/HeroSection';
+import Header from './components/Header';  // Import the Header component directly
 import AboutUs from './components/AboutUs';
 import MissionAndVision from './components/MissionAndVision';
 import GoalsAndObjectives from './components/GoalsAndObjectives';
@@ -42,7 +43,8 @@ function App() {
 
   const EventsPage = () => (
     <>
-      <HeroSection onToggleTheme={toggleTheme} isDarkMode={isDarkMode} minimal={true} currentPage="events" />
+      <Header onToggleTheme={toggleTheme} isDarkMode={isDarkMode} currentPage="events" />
+      <div className="page-spacer"></div> {/* Add spacing after header */}
       <AllEvents />
       <Footer isDarkMode={isDarkMode} />
     </>
