@@ -85,9 +85,9 @@ const LeadershipSection = () => {
     // Reorder middle leaders for proper grid layout
     const middleLeaders = [
         leaders[1], // Laith
+        leaders[2], // Bayan - adjusting position
         leaders[3], // Albara
         leaders[4], // Qusai
-        leaders[2], // Bayan - adjusting position
     ];
 
     return (
