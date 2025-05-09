@@ -147,7 +147,7 @@
     border: 1px solid rgba(44, 171, 226, 0.2);
     position: relative;
     overflow: hidden;
-    margin-left: 3rem; /* Add margin from the animation */
+    
   }
   
   .hero-content:before {
