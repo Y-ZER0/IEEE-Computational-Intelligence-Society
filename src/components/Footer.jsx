@@ -36,7 +36,7 @@ const Footer = ({ isDarkMode, currentRoute }) => {
 
   return (
     <footer className={`footer ${isDarkMode ? 'footer-dark' : 'footer-light'}`}>
-      <div className="footer-container">
+      <div className="footer-container ">
         <div className="footer-section brand-section">
           <div className="logo-container">
             <img 

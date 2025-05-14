@@ -57,7 +57,7 @@ const GoalsAndObjectives = () => {
   }, []);
 
   return (
-    <section className={`goals-section ${isVisible ? 'visible' : ''}`}>
+    <section className={`goals-section ${isVisible ? 'visible' : ''}`} id = "goals">
       <div className="goals-container">
         <div className={`goals-heading ${isVisible ? 'animate-in' : ''}`}>
           <h2 className="title" >Our Goals</h2>
@@ -67,8 +67,7 @@ const GoalsAndObjectives = () => {
         <div className="goals-wrapper">
           <div className={`goals-left ${isVisible ? 'animate-in' : ''}`}>
             <div className="goals-image-container">
-              {/* Using a direct path to the image */}
-              <img src="/images/GroupPhotoMain.jpg" alt="IEEE CIS JU Team" className="goals-image" />
+              <img src= {`${process.env.PUBLIC_URL}/images/GroupPhotoMain.jpg`} alt="IEEE CIS JU Team" className="goals-image" />
             </div>
             
             <div className="ai-planning-card">

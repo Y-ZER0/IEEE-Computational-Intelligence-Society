@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import '../ComponentsStyling/LeadershipSection.css';
 import { Mail, Linkedin } from 'lucide-react';
@@ -89,17 +90,10 @@ const LeadershipSection = () => {
     const webmaster = leaders[5];
     
     const middleLeaders = [
-<<<<<<< HEAD
         leaders[1], 
         leaders[3], 
         leaders[4], 
         leaders[2], 
-=======
-        leaders[1], // Laith
-        leaders[2], // Bayan - adjusting position
-        leaders[3], // Albara
-        leaders[4], // Qusai
->>>>>>> 7de2df16f436cf0341ba3e23bddabbe7ec25cdd9
     ];
 
     return (
@@ -144,7 +138,6 @@ const LeadershipSection = () => {
                 </div>
             </section>
 
-            {/* Committee Leadership Section */}
             <section className="leadership-section animate-section" id="committees" ref={sectionRef}>
                 <div className="leadership-container">
                     <h2 className="leadership-title">Our Committees</h2>
@@ -187,7 +180,6 @@ const LeadershipSection = () => {
                         ))}
                     </div>
                     
-                    {/* Webmaster Card (Centered) */}
                     <div className="webmaster-container">
                         <div className="leadership-card webmaster-card">
                             <div className="leader-image-container">
