@@ -128,6 +128,10 @@
   border: 1px solid rgba(44, 171, 226, 0.2);
   position: relative;
   overflow: hidden;
+
+  
+  align-items: center;
+  text-align: center;
 }
 
 .hero-content:before {
