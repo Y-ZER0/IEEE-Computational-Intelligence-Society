@@ -18,7 +18,7 @@ const WebMasters = () => {
       {
         name: "Hussam Tarteer",
         role: "Technical Support",
-        contribution: "Provided domain services and backend assistance",
+        contribution: "Provided domain services and deployment assistance",
         image: `${process.env.PUBLIC_URL}/images/Hussam.jpg`
       }
   ];

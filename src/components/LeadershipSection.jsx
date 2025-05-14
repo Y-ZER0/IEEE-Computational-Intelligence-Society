@@ -89,10 +89,17 @@ const LeadershipSection = () => {
     const webmaster = leaders[5];
     
     const middleLeaders = [
+<<<<<<< HEAD
         leaders[1], 
         leaders[3], 
         leaders[4], 
         leaders[2], 
+=======
+        leaders[1], // Laith
+        leaders[2], // Bayan - adjusting position
+        leaders[3], // Albara
+        leaders[4], // Qusai
+>>>>>>> 7de2df16f436cf0341ba3e23bddabbe7ec25cdd9
     ];
 
     return (
