@@ -1,10 +1,10 @@
-// LeadershipSection.jsx with modified layout
 import React, { useEffect, useRef } from 'react';
 import '../ComponentsStyling/LeadershipSection.css';
 import { Mail, Linkedin } from 'lucide-react';
 
 const LeadershipSection = () => {
     const sectionRef = useRef(null);
+    const advisorSectionRef = useRef(null);
     
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -20,9 +20,16 @@ const LeadershipSection = () => {
             observer.observe(sectionRef.current);
         }
         
+        if (advisorSectionRef.current) {
+            observer.observe(advisorSectionRef.current);
+        }
+        
         return () => {
             if (sectionRef.current) {
                 observer.unobserve(sectionRef.current);
+            }
+            if (advisorSectionRef.current) {
+                observer.unobserve(advisorSectionRef.current);
             }
         };
     }, []);
@@ -78,79 +85,120 @@ const LeadershipSection = () => {
         },
     ];
 
-    // Separate the advisor, webmaster, and the rest of the leaders
     const advisor = leaders[0];
     const webmaster = leaders[5];
     
-    // Reorder middle leaders for proper grid layout
     const middleLeaders = [
-        leaders[1], // Laith
-        leaders[3], // Albara
-        leaders[4], // Qusai
-        leaders[2], // Bayan - adjusting position
+        leaders[1], 
+        leaders[3], 
+        leaders[4], 
+        leaders[2], 
     ];
 
     return (
-        <section className="leadership-section animate-section" id="committees" ref={sectionRef}>
-            <div className="leadership-container">
-                <h2 className="leadership-title">Our Committees</h2>
-                
-                {/* Advisor Card (Centered) */}
-                <div className="advisor-container">
-                    <div className="leadership-card advisor-card">
-                        <div className="leader-image-container">
-                            <img 
-                                src={advisor.image} 
-                                alt={advisor.name} 
-                                className="leader-image"
-                            />
-                            <div className="leader-overlay">
-                                <div className="leader-name">{advisor.name}</div>
-                                <div className="leader-title">{advisor.title}</div>
+        <>
+            <section className="advisor-section animate-section" id="advisor" ref={advisorSectionRef}>
+                <div className="advisor-container-special">
+                    <h2 className="advisor-title">Our Advisor</h2>
+                    <div className="advisor-content">
+                        <div className="advisor-profile">
+                            <div className="advisor-image-container">
+                                <img 
+                                    src={advisor.image} 
+                                    alt={advisor.name} 
+                                    className="advisor-image"
+                                />
                             </div>
                         </div>
-                        <div className="leader-details">
-                            <p className="leader-bio">{advisor.bio}</p>
-                            <div className="leader-contact">
+                        <div className="advisor-info">
+                            <h3 className="advisor-name">{advisor.name}</h3>
+                            <h4 className="advisor-role">{advisor.title}</h4>
+                            <p className="advisor-bio">{advisor.bio}</p>
+                            <div className="advisor-contact">
                                 <a 
                                     href={advisor.linkedin} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="leader-contact-icon"
+                                    className="advisor-contact-icon"
                                 >
                                     <Linkedin />
                                 </a>
-                                <a 
-                                    href={`mailto:${advisor.email}`}
-                                    className="leader-contact-icon"
-                                >
-                                    <Mail />
-                                </a>
+                                {advisor.email && (
+                                    <a 
+                                        href={`mailto:${advisor.email}`}
+                                        className="advisor-contact-icon"
+                                    >
+                                        <Mail />
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                {/* Middle Leaders Grid */}
-                <div className="leadership-grid">
-                    {middleLeaders.map((leader, index) => (
-                        <div key={index} className="leadership-card">
+            </section>
+
+            {/* Committee Leadership Section */}
+            <section className="leadership-section animate-section" id="committees" ref={sectionRef}>
+                <div className="leadership-container">
+                    <h2 className="leadership-title">Our Committees</h2>
+                    
+                    {/* Middle Leaders Grid */}
+                    <div className="leadership-grid">
+                        {middleLeaders.map((leader, index) => (
+                            <div key={index} className="leadership-card">
+                                <div className="leader-image-container">
+                                    <img 
+                                        src={leader.image} 
+                                        alt={leader.name} 
+                                        className="leader-image"
+                                    />
+                                    <div className="leader-overlay">
+                                        <div className="leader-name">{leader.name}</div>
+                                        <div className="leader-title">{leader.title}</div>
+                                    </div>
+                                </div>
+                                <div className="leader-details">
+                                    <p className="leader-bio">{leader.bio}</p>
+                                    <div className="leader-contact">
+                                        <a 
+                                            href={leader.linkedin} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="leader-contact-icon"
+                                        >
+                                            <Linkedin />
+                                        </a>
+                                        <a 
+                                            href={`mailto:${leader.email}`}
+                                            className="leader-contact-icon"
+                                        >
+                                            <Mail />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    {/* Webmaster Card (Centered) */}
+                    <div className="webmaster-container">
+                        <div className="leadership-card webmaster-card">
                             <div className="leader-image-container">
                                 <img 
-                                    src={leader.image} 
-                                    alt={leader.name} 
+                                    src={webmaster.image} 
+                                    alt={webmaster.name} 
                                     className="leader-image"
                                 />
                                 <div className="leader-overlay">
-                                    <div className="leader-name">{leader.name}</div>
-                                    <div className="leader-title">{leader.title}</div>
+                                    <div className="leader-name">{webmaster.name}</div>
+                                    <div className="leader-title">{webmaster.title}</div>
                                 </div>
                             </div>
                             <div className="leader-details">
-                                <p className="leader-bio">{leader.bio}</p>
+                                <p className="leader-bio">{webmaster.bio}</p>
                                 <div className="leader-contact">
                                     <a 
-                                        href={leader.linkedin} 
+                                        href={webmaster.linkedin} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         className="leader-contact-icon"
@@ -158,7 +206,7 @@ const LeadershipSection = () => {
                                         <Linkedin />
                                     </a>
                                     <a 
-                                        href={`mailto:${leader.email}`}
+                                        href={`mailto:${webmaster.email}`}
                                         className="leader-contact-icon"
                                     >
                                         <Mail />
@@ -166,46 +214,10 @@ const LeadershipSection = () => {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-                
-                {/* Webmaster Card (Centered) */}
-                <div className="webmaster-container">
-                    <div className="leadership-card webmaster-card">
-                        <div className="leader-image-container">
-                            <img 
-                                src={webmaster.image} 
-                                alt={webmaster.name} 
-                                className="leader-image"
-                            />
-                            <div className="leader-overlay">
-                                <div className="leader-name">{webmaster.name}</div>
-                                <div className="leader-title">{webmaster.title}</div>
-                            </div>
-                        </div>
-                        <div className="leader-details">
-                            <p className="leader-bio">{webmaster.bio}</p>
-                            <div className="leader-contact">
-                                <a 
-                                    href={webmaster.linkedin} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="leader-contact-icon"
-                                >
-                                    <Linkedin />
-                                </a>
-                                <a 
-                                    href={`mailto:${webmaster.email}`}
-                                    className="leader-contact-icon"
-                                >
-                                    <Mail />
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

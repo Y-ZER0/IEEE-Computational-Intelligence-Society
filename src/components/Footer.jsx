@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../ComponentsStyling/Footer.css';
 import { FaInstagram, FaLinkedinIn, FaFacebook, FaMapMarkerAlt, FaEnvelope, FaChevronRight } from 'react-icons/fa';
+import { RouteContext } from '../App';
 
-const Footer = ({ isDarkMode }) => {
+const Footer = ({ isDarkMode, currentRoute }) => {
+  const navigate = useNavigate();
+  const { currentRoute: contextRoute } = useContext(RouteContext);
+  
+  const route = currentRoute || contextRoute;
+
   const handleNavLinkClick = (e, sectionId) => {
     e.preventDefault();
+    
+    if (route !== '/') {
+      navigate('/');
+      
+      sessionStorage.setItem('scrollToSection', sectionId.substring(1));
+      return;
+    }
     
     const targetSection = document.getElementById(sectionId.substring(1));
     

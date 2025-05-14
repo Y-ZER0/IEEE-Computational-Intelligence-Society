@@ -164,7 +164,7 @@
   object-fit: cover;
   object-position: center center;
   transition: transform 0.5s ease, filter 0.3s ease;
-  display: block; /* Eliminates any inline spacing issues */
+  display: block;
 }
 
 .web-master-card:first-child .web-master-image {

@@ -6,7 +6,7 @@
 }
   
   .footer-light {
-    background: linear-gradient(135deg, var(--light-card-bg) 0%, var(--light-secondary-bg) 50%, var(--secondary-black) 100%);
+    background: #fff; 
     color: var(--secondary-black);
   }
   
@@ -314,5 +314,3 @@
       justify-content: center;
     }
   }
-
-  

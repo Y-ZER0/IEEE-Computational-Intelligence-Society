@@ -11,6 +11,8 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
   
   const displayedEvents = limit ? eventsData.slice(0, limit) : eventsData;
 
+  const [failedImages, setFailedImages] = useState({});
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -56,6 +58,15 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
     window.scrollTo(0, 0);
   };
 
+  const handleImageError = (id) => {
+    if (!failedImages[id]) {
+      setFailedImages(prev => ({
+        ...prev,
+        [id]: true
+      }));
+    }
+  };
+
   eventRefs.current = displayedEvents.map((_, i) => eventRefs.current[i] ?? createRef());
 
   return (
@@ -75,10 +86,11 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
             >
               <div className="timeline-content">
                 <div className="event-image">
-                  <img src={event.image} alt={event.title} onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = `${process.env.PUBLIC_URL}/images/placeholder.jpg`; 
-                  }} />
+                  <img 
+                    src={failedImages[event.id] ? `${process.env.PUBLIC_URL}/images/placeholder.jpg` : event.image} 
+                    alt={event.title} 
+                    onError={() => handleImageError(event.id)}
+                  />
                 </div>
                 <div className="event-date">{event.date}</div>
                 <h3 className="event-title">{event.title}</h3>
@@ -111,10 +123,11 @@ const EventsWorkshops = ({ limit = 6, showExploreMore = true }) => {
               <button className="close-modal-btn" onClick={closeModal}>×</button>
             </div>
             <div className="modal-image">
-              <img src={selectedEvent.image} alt={selectedEvent.title} onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = `${process.env.PUBLIC_URL}/images/placeholder.jpg`; 
-              }} />
+              <img 
+                src={failedImages[selectedEvent.id] ? `${process.env.PUBLIC_URL}/images/placeholder.jpg` : selectedEvent.image} 
+                alt={selectedEvent.title} 
+                onError={() => handleImageError(selectedEvent.id)}
+              />
             </div>
             <div className="modal-date">{selectedEvent.date}</div>
             <div className="modal-description">

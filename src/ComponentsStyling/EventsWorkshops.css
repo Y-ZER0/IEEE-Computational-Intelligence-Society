@@ -158,7 +158,7 @@
 }
 
 .dark-mode .event-title {
-  color: var(--primary-white);
+  color: #ffffff;
 }
 
 .event-description {
@@ -170,7 +170,8 @@
 }
 
 .dark-mode .event-description {
-  color: var(--dark-secondary-text);
+  color: #e0e0e0;
+  opacity: 0.9;
 }
 
 .learn-more-btn {
@@ -219,7 +220,8 @@
 }
 
 .dark-mode .event-modal-content {
-  background-color: var(--dark-card-bg);
+  background: linear-gradient(120deg, #0d0d0d 0%, #2c3e50 100%);
+  color: #ffffff;
 }
 
 @keyframes modalFade {
@@ -253,7 +255,7 @@
 }
 
 .dark-mode .modal-header h2 {
-  color: var(--primary-white);
+  color: #ffffff;
 }
 
 .close-modal-btn {
@@ -299,7 +301,8 @@
 }
 
 .dark-mode .modal-description {
-  color: var(--dark-secondary-text);
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .modal-description p {
@@ -497,6 +500,19 @@
 
 .dark-mode .explore-more-btn:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .close-modal-btn {
+  color: #ffffff;
+}
+
+.dark-mode .close-modal-btn:hover {
+  color: #cccccc;
+}
+
+.dark-mode .event-date,
+.dark-mode .modal-date {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {

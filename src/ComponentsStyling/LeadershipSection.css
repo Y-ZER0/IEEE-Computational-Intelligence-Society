@@ -5,6 +5,201 @@
     bottom: 9.1rem;
 }
 
+
+.advisor-section {
+    background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+    padding: 5rem 0;
+    position: relative;
+    bottom: 9rem;
+    border-bottom: 1px solid rgba(0, 98, 155, 0.1);
+}
+
+.advisor-container-special {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.advisor-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #00629B, #2CABE2);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.advisor-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.advisor-profile {
+    flex: 0 0 40%;
+}
+
+.advisor-image-container {
+    position: relative;
+    height: 100%;
+    min-height: 360px;
+    overflow: hidden;
+}
+
+.advisor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    transition: transform 0.5s ease;
+}
+
+.advisor-content:hover .advisor-image {
+    transform: scale(1.05);
+}
+
+.advisor-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.advisor-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #00629B, #2CABE2);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.advisor-role {
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.advisor-bio {
+    color: #36454F;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.advisor-contact {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.advisor-contact-icon {
+    color: #2CABE2;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.advisor-contact-icon:hover {
+    color: #00629B;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 900px) {
+    .advisor-content {
+        flex-direction: column;
+        max-width: 600px;
+    }
+    
+    .advisor-profile {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .advisor-image-container {
+        min-height: 350px;
+    }
+    
+    .advisor-info {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .advisor-contact {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .advisor-section {
+        padding: 3rem 0;
+    }
+    
+    .advisor-title {
+        font-size: 2rem;
+    }
+    
+    .advisor-name {
+        font-size: 1.75rem;
+    }
+    
+    .advisor-role {
+        font-size: 1.1rem;
+    }
+    
+    .advisor-image-container {
+        min-height: 300px;
+    }
+}
+
+
+.dark-mode .advisor-section {
+    background: linear-gradient(135deg, #1a2a3a 0%, #0d0d0d 100%);
+}
+
+.dark-mode .advisor-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .advisor-title {
+    color: var(--about-us-primary-accent-dark);
+    -webkit-background-clip: initial;
+    background: none;
+}
+
+.dark-mode .advisor-name {
+    color: var(--about-us-primary-accent-dark);
+    -webkit-background-clip: initial;
+    background: none;
+}
+
+.dark-mode .advisor-role {
+    color: #c4c4c4;
+}
+
+.dark-mode .advisor-bio {
+    color: var(--about-us-text-dark);
+}
+
+.dark-mode .advisor-contact-icon {
+    color: var(--about-us-primary-accent-dark);
+}
+
+.dark-mode .advisor-contact-icon:hover {
+    color: var(--about-us-secondary-accent-dark);
+}
+
 .leadership-container {
     max-width: 1200px;  
     margin: 0 auto;
@@ -24,20 +219,6 @@
     animation-delay: 0.2s;
 }
 
-/* Advisor container - centered */
-.advisor-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
-}
-
-.advisor-card {
-    width: 100%;
-    max-width: 500px;
-    animation-delay: 0.2s !important;
-}
-
-/* Webmaster container - centered */
 .webmaster-container {
     display: flex;
     justify-content: center;
@@ -50,7 +231,7 @@
     animation-delay: 1.1s !important;
 }
 
-/* Middle leadership grid - 2x2 */
+
 .leadership-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -62,7 +243,6 @@
         grid-template-columns: 1fr;
     }
     
-    .advisor-card,
     .webmaster-card {
         max-width: 100%;
     }
@@ -142,7 +322,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Specific image position adjustments */
+
 .leadership-grid .leadership-card:nth-child(2) .leader-image {
     object-position: center 20%;
 }

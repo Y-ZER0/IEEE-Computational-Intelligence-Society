@@ -160,20 +160,7 @@
   opacity: 1;
 }
 
-.light-mode .ieee-cis-stats .icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  position: relative;
-  left: 10px;
-}
-
+.light-mode .ieee-cis-stats .icon-container,
 .dark-mode .ieee-cis-stats .icon-container {
   display: flex;
   align-items: center;
@@ -182,10 +169,18 @@
   height: 80px;
   border-radius: 50%;
   margin-bottom: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #1a1a1a; 
   position: relative;
-  left: 10px;
+  left: 0px;
+}
+
+.light-mode .ieee-cis-stats .icon-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.dark-mode .ieee-cis-stats .icon-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1a1a1a;
 }
 
 .light-mode .ieee-cis-stats .stat-value {
@@ -237,11 +232,15 @@
 }
 
 @media (max-width: 575px) {
-  .ieee-cis-stats .icon-container {
-    position: static; 
-    left: auto;
-    margin: 0 auto 1.5rem; 
-    transform: translateX(0); 
+  .light-mode .ieee-cis-stats .icon-container,
+  .dark-mode .ieee-cis-stats .icon-container {
+    position: static;
+    left: 0;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .ieee-cis-stats .stat-card {
+    text-align: center;
   }
 }
 
@@ -252,12 +251,6 @@
   
   .ieee-cis-stats .section-title {
     font-size: 2rem;
-  }
-
-  .ieee-cis-stats .icon-container {
-    position: static;
-    left: auto;
-    margin: 0 auto 1.5rem;
   }
   
   .ieee-cis-stats .stat-card {

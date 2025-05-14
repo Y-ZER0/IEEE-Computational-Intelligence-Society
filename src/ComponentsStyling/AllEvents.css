@@ -42,14 +42,12 @@
   }
 }
 
-/* Large screens */
 @media (min-width: 1025px) {
   .all-events-page {
     top: 20px;
   }
 }
 
-/* Medium-large screens */
 @media (max-width: 1024px) {
   .all-events-page {
     padding-top: 70px;
@@ -65,7 +63,6 @@
   }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
   .all-events-page {
     padding-top: 35px;
@@ -91,7 +88,6 @@
   }
 }
 
-/* Large mobile */
 @media (max-width: 576px) {
   .all-events-page {
     padding-top: 45px;
@@ -123,7 +119,6 @@
   }
 }
 
-/* Medium mobile - fixing the 480px range specifically */
 @media (max-width: 480px) {
   .all-events-page {
     padding-top: 35px;
@@ -135,7 +130,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 375px) {
   .all-events-page {
     padding-top: 0px;
@@ -156,7 +150,6 @@
   }
 }
 
-/* Extra small mobile */
 @media (max-width: 320px) {
   .all-events-page {
     padding-top: 5px;
@@ -171,7 +164,6 @@
   }
 }
 
-/* Extremely small screens */
 @media screen and (max-width: 282px) {
   .all-events-page {
     padding-top: 0px;
