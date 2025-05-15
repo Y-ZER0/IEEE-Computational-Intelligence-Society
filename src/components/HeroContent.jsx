@@ -221,9 +221,6 @@ function HeroContent() {
           <h1 className="hero-title">Your Gateway to Computational Intelligence Excellence</h1>
           <p className="hero-description">
             Welcome to the IEEE Computational Intelligence Society (CIS) at the University of Jordan. 
-            As a premier student-led organization, we bridge cutting-edge research with practical applications
-            in artificial intelligence, machine learning, and computational intelligence. Explore our events,
-            join specialized technical teams, and collaborate with peers to shape the future of intelligent systems.
           </p>
           <div className="button-container">
             <a href="#join" className="btn btn--primary">
