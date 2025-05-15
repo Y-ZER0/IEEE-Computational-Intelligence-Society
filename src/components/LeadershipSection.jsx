@@ -91,9 +91,9 @@ const LeadershipSection = () => {
     
     const middleLeaders = [
         leaders[1], 
-        leaders[2], 
         leaders[3], 
         leaders[4], 
+        leaders[2], 
     ];
 
     return (
