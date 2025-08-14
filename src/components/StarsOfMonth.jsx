@@ -34,7 +34,7 @@ const StarsOfMonth = ({ isDarkMode }) => {
     },
     {
         id: 6,
-        name: "Ibrahim Basem",
+        name: "Ibrahem Basem",
         image: `${process.env.PUBLIC_URL}/images/Ibrahim.jpg`
     }
   ];

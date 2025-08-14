@@ -223,7 +223,7 @@ function HeroContent() {
             Welcome to the IEEE Computational Intelligence Society (CIS) at the University of Jordan. 
           </p>
           <div className="button-container">
-            <a href="#join" className="btn btn--primary">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhra1Ew0o1LB-zTGFTN4Alj7JDKvBl83xG-hGHtgRv18JATQ/viewform" className="btn btn--primary">
               <span>Join Us</span>
             </a>
           </div>
